@@ -527,8 +527,8 @@ LightGBM-M HE & ปฏิทิน (holiday regressors) & 5.5 (0.2) & 0.79 \\
 \end{thebibliography}
 
 \appendix
-\renewcommand{\thesection}{\ifcase\value{section}\or ก\or ข\or ค\or ง\fi}
-\section{โค้ดหลัก}
+\section*{ภาคผนวก ก: โค้ดหลัก}
+\addcontentsline{toc}{section}{ภาคผนวก ก}
 ส่วนที่ตัดมาจาก \texttt{src/hesi/forecast.py} แสดงการสร้าง HESI ตัวแปรร่วม การแก้อคติ AC และการฝึก Prophet บนสเกล log
 
 \begin{lstlisting}
@@ -571,7 +571,7 @@ class ProphetLog:
         return self
 \end{lstlisting}
 
-\section{Research prompt}
+\section*{ภาคผนวก ข: Research prompt}
 ไฟล์ \texttt{prompts/research\_prompt.md} ใน repositoryเป็นคำสั่งสำหรับ AI agent ที่รันโค้ดได้ เพื่อทำการศึกษาซ้ำกับข้อมูลส่งออกจริง กำหนดสัดส่วนงาน Academic 45\% ต่อ Code 55\% และรวมกฎกันข้อมูลรั่วไหล การออกแบบการประเมิน และรายการตรวจสอบก่อนส่งงาน
 
 \end{document}
