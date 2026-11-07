@@ -7,6 +7,9 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- Dataset on Hugging Face, [`thanatchon36/lockdowns-as-partial-holidays`](https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays): daily drivers and shared
+  regressors, the OxCGRT and Google Mobility extracts, simulated exports and forecast paths of replication 0,
+  and all Monte Carlo results, as CSV with a dataset card, licence and checksums (`make dataset`).
 - Installable package `hesi` (`pyproject.toml`, `make setup` with uv) and one command line, `hesi`
   (`simulate`, `robust`, `figures`, `paper`, `thai`, `web`, `real`).
 - Web reader of the paper, `docs/paper/index.html` (`make web`), built with pandoc from the same filled LaTeX as

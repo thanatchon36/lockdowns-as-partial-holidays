@@ -17,6 +17,7 @@ from . import paper_build as PB
 
 REPO_URL = "https://github.com/thanatchon36/lockdowns-as-partial-holidays"
 PAPER_URL = "https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/"
+DATA_URL = "https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays"
 TITLE = "Lockdowns as Partial Holidays"
 SUBTITLE = ("Identifying Work-Stoppage Elasticities from Recurring Holidays and Transferring Them to Forecast "
             "Thailand's Monthly Exports through the COVID-19 Shock")
@@ -197,6 +198,7 @@ def build_web(paper_dir: Path = Path("paper"), out_dir: Path = Path("docs/paper"
         for label, style, finding, detail in RESULTS)
     actions = ('<li><a href="paper.pdf">Download PDF</a></li>'
                f'<li><a href="{REPO_URL}">Code and replication</a></li>'
+               f'<li><a href="{DATA_URL}">Data (Hugging Face)</a></li>'
                f'<li><a href="{REPO_URL}/blob/main/paper/thai/paper_th.pdf">ฉบับภาษาไทย (PDF)</a></li>')
     bib = ("@misc{chongmankhong2026lockdowns,\n"
            "  author = {Chongmankhong, Thanatchon},\n"

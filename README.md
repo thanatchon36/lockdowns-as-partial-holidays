@@ -8,6 +8,7 @@
 <a href="paper/thai/paper_th.pdf"><img src="https://img.shields.io/badge/%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A-%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2-f5a623?style=flat-square&labelColor=0b1020" alt="Thai version"></a>
 <a href="docs/data_sources.md"><img src="https://img.shields.io/badge/exports-simulated-b0560f?style=flat-square&labelColor=0b1020" alt="Exports: simulated"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffe8a3?style=flat-square&labelColor=0b1020" alt="License MIT"></a>
+<a href="https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-lockdowns--as--partial--holidays-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face dataset"></a>
 </p>
 
 <p align="center">
@@ -15,6 +16,7 @@
 📄 <b><a href="paper/paper.pdf">Download the PDF</a></b> ·
 🇹🇭 <b><a href="paper/thai/paper_th.pdf">ฉบับภาษาไทย</a></b> ·
 🗂️ <b><a href="docs/data_sources.md">Data sources</a></b> ·
+🤗 <b><a href="https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays">Dataset</a></b> ·
 🤖 <b><a href="prompts/research_prompt.md">Research prompt</a></b>
 </p>
 
@@ -60,6 +62,7 @@ Full reproduction from scratch: `make all` (simulate + robust + figures + paper,
 | `thai` | Thai draft → `paper/thai/paper_th.pdf` (tectonic, or xelatex) |
 | `arxiv` | arXiv source bundle → `paper/arxiv.tar.gz` (prints title, abstract and comments for the form) |
 | `banner` | README banner → `docs/assets/banner.png`, from the real Google Mobility data |
+| `dataset` | Hugging Face dataset → `dist/hf_dataset/` (CSV only, with card, licence and checksums) |
 
 Every target is a thin wrapper around the `hesi` command (`hesi --help`), installed by `make setup`.
 
@@ -120,6 +123,9 @@ identified from recurring holidays can forecast exports during lockdowns that ne
 sample, how sensitive the transfer is to the dose, what monthly data lose, and whether tree ensembles can do the same.
 
 - Figures: [`paper/figures/`](paper/figures/) · Results: [`results/`](results/)
+- Dataset on Hugging Face: [`thanatchon36/lockdowns-as-partial-holidays`](https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays), with the daily drivers
+  and shared regressors, the real OxCGRT and Google Mobility extracts, the simulated exports and forecast
+  paths of replication 0, and all Monte Carlo results as CSV (`make dataset` builds it)
 - Thai-language draft: [`paper/thai/paper_th.pdf`](paper/thai/paper_th.pdf) (source `paper/thai/paper_th.tex`,
   Sarabun font)
 - Research prompt for an AI agent to replicate the study with official data:
@@ -138,6 +144,7 @@ src/hesi/
   cli.py                    hesi {simulate,robust,figures,paper,thai,web,real}
 scripts/arxiv_bundle.py     arXiv source bundle
 scripts/make_banner.py      README banner
+scripts/export_hf_dataset.py  Hugging Face dataset; card and licence in docs/hf_dataset/
 data/raw/                   OxCGRT (Thailand, China) and Google Mobility (Thailand) extracts
 docs/data_sources.md        files, provenance and terms of use
 docs/paper/                 web reader (GitHub Pages), built by `make web`

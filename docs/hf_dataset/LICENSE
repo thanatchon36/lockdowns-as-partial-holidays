@@ -1,0 +1,24 @@
+Lockdowns as Partial Holidays: dataset licence
+
+1. Simulated data, derived regressors and results
+
+   simulated/*, results/*, data/regressors_daily.csv, and the columns H, C, weekend, e_cn, bin_th and bin_cn of
+   data/drivers_daily.csv
+   Copyright (c) 2026 Thanatchon Chongmankhong
+   Licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0),
+   https://creativecommons.org/licenses/by/4.0/
+
+2. Oxford COVID-19 Government Response Tracker
+
+   data/raw/oxcgrt_si.csv and the columns s_th and s_cn of data/drivers_daily.csv
+   Source: https://github.com/OxCGRT/covid-policy-dataset
+   Licensed under CC BY 4.0 by the Blavatnik School of Government, University of Oxford.
+   Cite: Hale, T. et al. (2021). A global panel database of pandemic policies (Oxford COVID-19 Government
+   Response Tracker). Nature Human Behaviour, 5, 529-538.
+
+3. Google COVID-19 Community Mobility Reports
+
+   data/raw/gmob_thailand.csv and the columns workplaces_pct and hesi_th of data/drivers_daily.csv
+   Source: Google LLC, via the mirror https://github.com/ActiveConclusion/COVID19_mobility
+   These data remain under Google's terms of use. Attribute: Google LLC "Google COVID-19 Community Mobility
+   Reports", https://www.google.com/covid19/mobility/

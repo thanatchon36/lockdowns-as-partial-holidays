@@ -1,7 +1,7 @@
 PY ?= .venv/bin/python
 REPS ?= 30
 
-.PHONY: setup test simulate robust figures paper thai web arxiv banner all clean
+.PHONY: setup test simulate robust figures paper thai web arxiv banner dataset all clean
 
 setup:          ## create venv and install the package (needs uv)
 	uv venv .venv --python 3.12
@@ -36,6 +36,9 @@ arxiv: paper    ## arXiv source bundle -> paper/arxiv.tar.gz
 
 banner:         ## README banner -> docs/assets/banner.png (real Google Mobility data)
 	$(PY) scripts/make_banner.py
+
+dataset:        ## Hugging Face dataset -> dist/hf_dataset/ (upload: hf upload thanatchon36/lockdowns-as-partial-holidays dist/hf_dataset . --repo-type dataset)
+	$(PY) scripts/export_hf_dataset.py
 
 all: simulate robust figures paper
 
