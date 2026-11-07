@@ -15,7 +15,6 @@
 <p align="center">
 📖 <b><a href="https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/">Read the paper online</a></b> ·
 📄 <b><a href="paper/paper.pdf">Download the PDF</a></b> ·
-🇹🇭 <b><a href="paper/thai/paper_th.pdf">ฉบับภาษาไทย</a></b> ·
 🗂️ <b><a href="docs/data_sources.md">Data sources</a></b> ·
 🤗 <b><a href="https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays">Dataset</a></b> ·
 🤖 <b><a href="prompts/research_prompt.md">Research prompt</a></b>
