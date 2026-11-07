@@ -1,79 +1,69 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass{article}
+\usepackage{../arxiv}
 \usepackage[no-math]{fontspec}
+\usepackage{mathptmx}
 \setmainfont{Sarabun}[Path=fonts/, Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold,
   ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic, Script=Thai]
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
-\linespread{1.16}
+\linespread{1.12}
+\usepackage{microtype}
 \emergencystretch=3em
-\usepackage[a4paper, left=2.2cm, right=2.2cm, top=2.3cm, bottom=2.4cm]{geometry}
-\usepackage{amsmath, amssymb, amsthm, mathtools}
-\usepackage{graphicx, booktabs, array, float}
+\usepackage{amsmath, amssymb, amsthm, mathtools, bm}
+\usepackage{graphicx, booktabs, array, float, placeins}
 \graphicspath{{../figures/}}
 \usepackage{xcolor}
-\usepackage{caption}
-\captionsetup{font=small, labelfont=bf, labelsep=colon}
+\usepackage[font=small, labelfont=bf, labelsep=period]{caption}
 \usepackage{enumitem}
-\setlist{itemsep=1pt, topsep=3pt}
+\setlist{itemsep=2pt, topsep=3pt}
 \usepackage{tikz}
 \usetikzlibrary{positioning, calc, arrows.meta}
-\usepackage[most]{tcolorbox}
 \usepackage{listings}
 \usepackage[round, authoryear]{natbib}
-\usepackage{fancyhdr}
-\usepackage{titlesec}
 \usepackage[unicode, colorlinks=true, linkcolor=blue!45!black, citecolor=blue!45!black, urlcolor=blue!45!black]{hyperref}
 \usepackage{xurl}
+\hypersetup{pdftitle={ล็อกดาวน์ในฐานะวันหยุดบางส่วน}, pdfauthor={ธนัชชนม์ จงมั่นคง},
+  pdfkeywords={Prophet, holiday effects, COVID-19, temporal aggregation, Thailand}}
+\renewcommand{\shorttitle}{ล็อกดาวน์ในฐานะวันหยุดบางส่วน}
+\renewcommand{\headeright}{ฉบับก่อนตีพิมพ์}
+\renewcommand{\undertitle}{ฉบับก่อนตีพิมพ์ (Preprint)}
 
 \renewcommand{\figurename}{รูปที่}
 \renewcommand{\tablename}{ตารางที่}
 \renewcommand{\refname}{เอกสารอ้างอิง}
+% arxiv.sty abstract with a settable heading: \begin{abstract}[บทคัดย่อ]
+\renewenvironment{abstract}[1][Abstract]{\centerline{\large\bfseries\scshape #1}\begin{quote}}{\end{quote}}
+\newcommand{\thaikeywords}[1]{{\def\keywordname{{\bfseries คำสำคัญ}}\keywords{#1}}}
 \theoremstyle{definition}
 \newtheorem{proposition}{ข้อเสนอ}
 \newtheorem{corollary}{บทแทรก}
 \newcommand{\HESI}{\mathrm{HESI}}
-\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
-\titlespacing*{\section}{0pt}{12pt}{5pt}
-\titlespacing*{\subsection}{0pt}{9pt}{3pt}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\footnotesize ล็อกดาวน์ในฐานะวันหยุดบางส่วน: Holiday-Equivalent Stoppage}
-\fancyhead[R]{\footnotesize ร่างงานวิจัย}
-\fancyfoot[C]{\footnotesize\thepage}
-\renewcommand{\headrulewidth}{0.3pt}
 \lstset{language=Python, basicstyle=\ttfamily\scriptsize, keywordstyle=\color{blue!60!black}\bfseries,
   commentstyle=\color{green!40!black}\itshape, stringstyle=\color{red!50!black}, frame=single,
   rulecolor=\color{black!25}, breaklines=true, columns=fullflexible, showstringspaces=false,
   backgroundcolor=\color{black!2}, xleftmargin=2pt, xrightmargin=2pt}
 
+\title{ล็อกดาวน์ในฐานะ “วันหยุดบางส่วน”:\\ การถ่ายโอนผลกระทบการหยุดงานจากสงกรานต์และตรุษจีน\\ เพื่อพยากรณ์มูลค่าการส่งออกรายเดือนของไทยผ่านช่วงโควิด-19 ด้วย Prophet}
+\author{\textbf{ธนัชชนม์ จงมั่นคง}\thanks{ผลเชิงปริมาณทั้งหมดในฉบับนี้มาจาก\textbf{การศึกษาแบบจำลอง (simulation study)} อนุกรมมูลค่าส่งออกเป็นข้อมูลจำลองที่ปรับสเกลให้ใกล้เคียงการส่งออกของไทย ส่วนปฏิทินวันหยุด ดัชนี OxCGRT และ Google Mobility เป็นข้อมูลจริง การยืนยันกับข้อมูลส่งออกจริงทำได้ด้วยคำสั่ง \texttt{real} ในโค้ดที่แนบ (ภาคผนวก ก) รายการเอกสารอ้างอิงรวบรวมโดยไม่ได้ตรวจกับฐานข้อมูลบรรณานุกรม จึงต้องตรวจสอบก่อนเผยแพร่}}
+\date{7 พฤศจิกายน 2569}
+
 \begin{document}
-\thispagestyle{empty}
-\begin{center}
-{\LARGE\bfseries ล็อกดาวน์ในฐานะ “วันหยุดบางส่วน”:\\[3pt]
-การถ่ายโอนผลกระทบการหยุดงานจากสงกรานต์และตรุษจีน\\[3pt]
-เพื่อพยากรณ์มูลค่าการส่งออกรายเดือนของไทยผ่านช่วงโควิด-19 ด้วย Prophet\par}
-\vspace{8pt}
-{\large Lockdowns as Partial Holidays: Transferring Work-Stoppage Effects Learned from Songkran and Chinese New Year to Forecast Thailand's Monthly Exports through COVID-19\par}
-\vspace{9pt}
-{[ชื่อผู้วิจัย] \quad · \quad [สังกัด] \quad · \quad [อีเมล]\par}
-\vspace{2pt}
-{\small ร่างงานวิจัย (working paper) ฉบับ 7 พฤศจิกายน 2569\par}
-\end{center}
+\maketitle
 
-\begin{tcolorbox}[colback=yellow!6, colframe=orange!60!black, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=3pt, bottom=3pt, fontupper=\small]
-\textbf{สถานะเอกสาร:} ผลเชิงปริมาณทั้งหมดในฉบับนี้มาจาก\textbf{การศึกษาแบบจำลอง (simulation study)} อนุกรมมูลค่าส่งออกเป็นข้อมูลจำลองที่ปรับสเกลให้ใกล้เคียงการส่งออกของไทย ส่วนปฏิทินวันหยุด ดัชนี OxCGRT และ Google Mobility เป็นข้อมูลจริง การยืนยันกับข้อมูลส่งออกจริงทำได้ด้วยคำสั่ง \texttt{real} ในโค้ดที่แนบ (ภาคผนวก ก) รายการเอกสารอ้างอิงรวบรวมโดยไม่ได้ตรวจกับฐานข้อมูลบรรณานุกรม จึงต้องตรวจสอบก่อนเผยแพร่
-\end{tcolorbox}
+\begin{abstract}[บทคัดย่อ]
+\noindent ช็อกจากโควิด-19 ทำให้อนุกรมมูลค่าการส่งออกรายเดือนของไทยมีช่วงที่หดตัวและฟื้นตัวผิดปกติ แบบจำลองพยากรณ์จึงเรียนรู้แนวโน้มและฤดูกาลที่บิดเบี้ยว และไม่มีพารามิเตอร์ใดที่ใช้คาดการณ์ผลของล็อกดาวน์ได้ก่อนที่จะเกิดขึ้น งานวิจัยนี้เสนอกรอบ \emph{Holiday-Equivalent Stoppage} (HES) ซึ่งมองล็อกดาวน์เป็น “วันหยุดบางส่วน” โดยให้ Prophet เรียนรู้ผลของการหยุดงานจากวันหยุดที่เกิดซ้ำทุกปี ได้แก่วันหยุดราชการไทยรวมสงกรานต์ (ช่องทางในประเทศ) และหน้าต่างตรุษจีน (ช่องทางคู่ค้า) ผ่านตัวแปรร่วมเพียงตัวเดียวต่อช่องทาง แล้วถ่ายโอนผลนั้นไปยังช่วงโควิดด้วยดัชนี HESI ซึ่งบอกว่าวันหนึ่งเทียบเท่าวันหยุดกี่ส่วน ดัชนีนี้คำนวณจากการลดลงของการเดินทางไปที่ทำงาน (Google Mobility) หารด้วยการลดลงในวันหยุดจริง บทความวิเคราะห์เงื่อนไขที่ทำให้การถ่ายโอนได้ผล อคติจากการรวมข้อมูลรายวันเป็นรายเดือนตามอสมการของ Jensen ปัญหาการระบุค่าเมื่อมีเพียงข้อมูลรายเดือน และเหตุที่แบบจำลองต้นไม้ถ่ายโอน “ปริมาณ” ไม่ได้ จากนั้นประเมินด้วยการจำลอง Monte Carlo จำนวน 30 รอบที่ใช้ปฏิทินวันหยุดและตัวขับเคลื่อนโควิดจริง ผลพบว่า (1)~เมื่อปริมาณถูกต้อง Prophet รายวันลด MAPE ช่วงปี 2020--2021 จาก 26.0\% เหลือ 7.8\% (2)~การเปิดผลวันหยุดตลอดทั้งเดือนแบบ binary ช่วยได้น้อย (22.7\%) และการใช้ดัชนี stringency ดิบทำให้แย่ลง (3)~ข้อมูลรายวันประมาณผลวันหยุดได้แม่นยำ ($\hat\beta_D=-0.80$ เทียบค่าจริง $-0.80$) ขณะที่ข้อมูลรายเดือนให้ค่าที่ถูกลดทอนและแกว่ง ($-0.54\pm0.13$) (4)~LightGBM ถ่ายโอนปริมาณไม่ได้เพราะเรียนรู้ความสัมพันธ์แบบสวิตช์ และ (5)~เมื่อปริมาณจาก mobility สูงเกินจริงสองเท่า การปรับเทียบจากสองเดือนแรกของล็อกดาวน์ลด MAPE จาก 13.0\% เหลือ 8.8\% ในช่วงปกติและช่วงหลังช็อก วิธีที่เรียบง่ายกว่า เช่น SARIMAX และการตัดช่วงช็อกออก ยังแข่งขันได้ดีหรือดีกว่า HES จึงเป็นเครื่องมือสำหรับช่วงช็อกที่วัดปริมาณได้ ไม่ใช่สูตรสำเร็จสำหรับทุกช่วงเวลา
+\end{abstract}
 
-\section*{บทคัดย่อ}
-ช็อกจากโควิด-19 ทำให้อนุกรมมูลค่าการส่งออกรายเดือนของไทยมีช่วงที่หดตัวและฟื้นตัวผิดปกติ แบบจำลองพยากรณ์จึงเรียนรู้แนวโน้มและฤดูกาลที่บิดเบี้ยว และไม่มีพารามิเตอร์ใดที่ใช้คาดการณ์ผลของล็อกดาวน์ได้ก่อนที่จะเกิดขึ้น งานวิจัยนี้เสนอกรอบ \emph{Holiday-Equivalent Stoppage} (HES) ซึ่งมองล็อกดาวน์เป็น “วันหยุดบางส่วน” โดยให้ Prophet เรียนรู้ผลของการหยุดงานจากวันหยุดที่เกิดซ้ำทุกปี ได้แก่วันหยุดราชการไทยรวมสงกรานต์ (ช่องทางในประเทศ) และหน้าต่างตรุษจีน (ช่องทางคู่ค้า) ผ่านตัวแปรร่วมเพียงตัวเดียวต่อช่องทาง แล้วถ่ายโอนผลนั้นไปยังช่วงโควิดด้วยดัชนี HESI ซึ่งบอกว่าวันหนึ่งเทียบเท่าวันหยุดกี่ส่วน ดัชนีนี้คำนวณจากการลดลงของการเดินทางไปที่ทำงาน (Google Mobility) หารด้วยการลดลงในวันหยุดจริง บทความวิเคราะห์เงื่อนไขที่ทำให้การถ่ายโอนได้ผล อคติจากการรวมข้อมูลรายวันเป็นรายเดือนตามอสมการของ Jensen ปัญหาการระบุค่าเมื่อมีเพียงข้อมูลรายเดือน และเหตุที่แบบจำลองต้นไม้ถ่ายโอน “ปริมาณ” ไม่ได้ จากนั้นประเมินด้วยการจำลอง Monte Carlo จำนวน 30 รอบที่ใช้ปฏิทินวันหยุดและตัวขับเคลื่อนโควิดจริง ผลพบว่า (1)~เมื่อปริมาณถูกต้อง Prophet รายวันลด MAPE ช่วงปี 2020--2021 จาก 26.0\% เหลือ 7.8\% (2)~การเปิดผลวันหยุดตลอดทั้งเดือนแบบ binary ช่วยได้น้อย (22.7\%) และการใช้ดัชนี stringency ดิบทำให้แย่ลง (3)~ข้อมูลรายวันประมาณผลวันหยุดได้แม่นยำ ($\hat\beta_D=-0.80$ เทียบค่าจริง $-0.80$) ขณะที่ข้อมูลรายเดือนให้ค่าที่ถูกลดทอนและแกว่ง ($-0.54\pm0.13$) (4)~LightGBM ถ่ายโอนปริมาณไม่ได้เพราะเรียนรู้ความสัมพันธ์แบบสวิตช์ และ (5)~เมื่อปริมาณจาก mobility สูงเกินจริงสองเท่า การปรับเทียบจากสองเดือนแรกของล็อกดาวน์ลด MAPE จาก 13.0\% เหลือ 8.8\% ในช่วงปกติและช่วงหลังช็อก วิธีที่เรียบง่ายกว่า เช่น SARIMAX และการตัดช่วงช็อกออก ยังแข่งขันได้ดีหรือดีกว่า HES จึงเป็นเครื่องมือสำหรับช่วงช็อกที่วัดปริมาณได้ ไม่ใช่สูตรสำเร็จสำหรับทุกช่วงเวลา
+\thaikeywords{Prophet \and ผลของวันหยุด \and โควิด-19 \and intervention analysis \and การถ่ายโอน \and การรวมข้อมูลตามเวลา \and การส่งออกของไทย \and LightGBM}
 
-\smallskip\noindent\textbf{คำสำคัญ:} Prophet; ผลของวันหยุด; โควิด-19; intervention analysis; การถ่ายโอน; การรวมข้อมูลตามเวลา; การส่งออกของไทย; LightGBM
+\noindent{\bfseries รหัส JEL}\enspace C15, C22, C53, F17
 
-\section*{Abstract}
+\begin{abstract}
+\noindent \textbf{Lockdowns as Partial Holidays: Transferring Work-Stoppage Effects Learned from Songkran and Chinese New Year to Forecast Thailand's Monthly Exports through COVID-19.}
 The COVID-19 shock created an abnormal collapse-and-rebound episode in Thailand's monthly export series. Forecasting models learn distorted trends and seasonality from it, and none of their parameters can anticipate a lockdown before it is observed. We propose the \emph{Holiday-Equivalent Stoppage} (HES) framework, which treats a lockdown as a \emph{partial holiday}. Prophet learns the work-stoppage effect from holidays that recur every year (Thai public holidays including Songkran for the domestic channel, the Chinese New Year window for the partner channel) through one shared regressor per channel, and transfers it to the pandemic through a Holiday-Equivalent Stoppage Index (HESI): the drop in workplace mobility relative to the drop on actual holidays. We derive when the transfer works, the Jensen bias from aggregating daily effects to months, the identification problem with monthly-only data, and why tree ensembles cannot transfer a dose. A Monte Carlo study with 30 replications, built on the real Thai holiday calendar and real OxCGRT and Google Mobility drivers, shows that (i) with the right dose, daily Prophet cuts the 2020--2021 MAPE from 26.0\% to 7.8\%; (ii) switching the holiday effect on for whole months helps little (22.7\%) and raw stringency makes forecasts worse; (iii) daily data recover the holiday effect precisely ($\hat\beta_D=-0.80$ vs.\ $-0.80$) whereas monthly data give attenuated, noisy estimates ($-0.54\pm0.13$); (iv) LightGBM learns an on/off switch rather than a dose-response; and (v) when the mobility dose overstates the true stoppage two-fold, calibrating it on the first two lockdown months lowers MAPE from 13.0\% to 8.8\%. In normal and post-shock periods simpler approaches (SARIMAX, masking the shock window) remain competitive or better, so HES is a tool for measurable shocks rather than a universal accuracy gain.
+\end{abstract}
 
-\smallskip\noindent\textbf{Keywords:} Prophet; holiday effects; COVID-19; intervention analysis; transfer; temporal aggregation; Thai exports; LightGBM
+\keywords{Prophet \and holiday effects \and COVID-19 \and intervention analysis \and transfer \and temporal aggregation \and Thai exports \and LightGBM}
 
 \section{บทนำ}
 การส่งออกสินค้าเป็นเครื่องยนต์สำคัญของเศรษฐกิจไทย ตัวเลขมูลค่าการส่งออกรายเดือนจึงถูกติดตามและพยากรณ์อย่างต่อเนื่องโดยหน่วยงานภาครัฐ ธนาคารกลาง และภาคเอกชน ในช่วงปี 2020--2022 การระบาดของโควิด-19 ทำให้อนุกรมนี้มีพฤติกรรมที่ไม่เคยปรากฏมาก่อน ทั้งการหดตัวรุนแรงในไตรมาสที่สองของปี 2020 และการฟื้นตัวแข็งแรงในปี 2021 สำหรับผู้พยากรณ์ ช่วงเวลานี้สร้างปัญหาสามชั้น ชั้นแรก แบบจำลองที่เรียนแนวโน้มและฤดูกาลจากข้อมูลจะถูกดึงให้บิดเบี้ยวตามช่วงช็อก ชั้นที่สอง ตัวแปรล้าหลัง (lag features) ที่แบบจำลองเชิงเครื่องจักรใช้จะพาความผิดปกติไปปนเปื้อนการพยากรณ์ในปีถัดไป ชั้นที่สามซึ่งเป็นปัญหาพื้นฐานที่สุด คือแบบจำลองไม่มีกลไกใดที่คาดการณ์ผลของล็อกดาวน์ครั้งใหม่ได้ก่อนจะเห็นข้อมูลของมัน
@@ -510,7 +500,7 @@ LightGBM-M HE & ปฏิทิน (holiday regressors) & 5.5 (0.2) & 0.79 \\
 งานนี้แสดงว่าล็อกดาวน์มองเป็น “วันหยุดบางส่วน” ได้จริง เมื่อผลการหยุดงานเรียนจากวันหยุดที่เกิดซ้ำผ่านตัวแปรร่วม และถูกนำไปใช้ด้วยปริมาณที่วัดได้ แบบจำลองพยากรณ์ผลของล็อกดาวน์ได้โดยไม่ต้องเห็นข้อมูลช่วงโควิดก่อน เงื่อนไขของความสำเร็จมีสามข้อ คือ (1)~ใช้ปริมาณ ไม่ใช่สวิตช์เปิด/ปิดทั้งเดือน (2)~ใช้ข้อมูลรายวันหรือแก้อคติจากการรวมเมื่อมีเพียงข้อมูลรายเดือน และ (3)~ปรับเทียบปริมาณเมื่อมีข้อมูลจริงเข้ามา แบบจำลองต้นไม้ไม่เหมาะกับงานถ่ายโอนลักษณะนี้ แต่ยังเป็นตัวเลือกที่ดีในช่วงปกติ
 
 \section*{ความสามารถในการทำซ้ำ (Reproducibility)}
-โค้ดทั้งหมดอยู่ในไฟล์ \texttt{hesi\_forecast.py} คำสั่ง \texttt{python hesi\_forecast.py simulate --reps 30} สร้างผลทั้งหมดในบทความ (ราว 25--30 วินาทีต่อรอบบน CPU หนึ่งแกน) และคำสั่ง \texttt{real --exports exports.csv} ใช้กับข้อมูลส่งออกรายเดือนจริง (คอลัมน์ \texttt{month,value}) โดยดาวน์โหลดข้อมูล OxCGRT และ Google Mobility อัตโนมัติ ทดสอบด้วย Python 3.12, prophet 1.5.0, lightgbm 4.7.0, statsmodels 0.15.0 และ holidays 0.108 ตัวเลขทุกตัวในข้อความและตารางสร้างจากไฟล์ผลโดยอัตโนมัติ
+โค้ดทั้งหมดอยู่ใน package \texttt{hesi} (\url{https://github.com/thanatchon36/lockdowns-as-partial-holidays}) คำสั่ง \texttt{hesi simulate --reps 30} สร้างผลทั้งหมดในบทความ (ราว 25--30 วินาทีต่อรอบบน CPU หนึ่งแกน) และคำสั่ง \texttt{hesi real --exports exports.csv} ใช้กับข้อมูลส่งออกรายเดือนจริง (คอลัมน์ \texttt{month,value}) โดยดาวน์โหลดข้อมูล OxCGRT และ Google Mobility อัตโนมัติ ทดสอบด้วย Python 3.12, prophet 1.5.0, lightgbm 4.7.0, statsmodels 0.15.0 และ holidays 0.108 ตัวเลขทุกตัวในข้อความและตารางสร้างจากไฟล์ผลโดยอัตโนมัติ
 
 \begin{thebibliography}{99}
 \setlength{\itemsep}{2pt}\small
@@ -537,9 +527,9 @@ LightGBM-M HE & ปฏิทิน (holiday regressors) & 5.5 (0.2) & 0.79 \\
 \end{thebibliography}
 
 \appendix
-\section*{ภาคผนวก ก: โค้ดหลัก}
-\addcontentsline{toc}{section}{ภาคผนวก ก}
-ส่วนที่ตัดมาจาก \texttt{hesi\_forecast.py} แสดงการสร้าง HESI ตัวแปรร่วม การแก้อคติ AC และการฝึก Prophet บนสเกล log
+\renewcommand{\thesection}{\ifcase\value{section}\or ก\or ข\or ค\or ง\fi}
+\section{โค้ดหลัก}
+ส่วนที่ตัดมาจาก \texttt{src/hesi/forecast.py} แสดงการสร้าง HESI ตัวแปรร่วม การแก้อคติ AC และการฝึก Prophet บนสเกล log
 
 \begin{lstlisting}
 def mobility_hesi(mob, hol, window=7):
@@ -581,7 +571,7 @@ class ProphetLog:
         return self
 \end{lstlisting}
 
-\section*{ภาคผนวก ข: Research prompt}
-ไฟล์ \texttt{research\_prompt.md} ที่แนบมาเป็นคำสั่งสำหรับ AI agent ที่รันโค้ดได้ เพื่อทำการศึกษาซ้ำกับข้อมูลส่งออกจริง กำหนดสัดส่วนงาน Academic 45\% ต่อ Code 55\% และรวมกฎกันข้อมูลรั่วไหล การออกแบบการประเมิน และรายการตรวจสอบก่อนส่งงาน
+\section{Research prompt}
+ไฟล์ \texttt{prompts/research\_prompt.md} ใน repositoryเป็นคำสั่งสำหรับ AI agent ที่รันโค้ดได้ เพื่อทำการศึกษาซ้ำกับข้อมูลส่งออกจริง กำหนดสัดส่วนงาน Academic 45\% ต่อ Code 55\% และรวมกฎกันข้อมูลรั่วไหล การออกแบบการประเมิน และรายการตรวจสอบก่อนส่งงาน
 
 \end{document}
