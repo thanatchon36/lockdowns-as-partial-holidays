@@ -13,7 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.dates as mdates  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
-import hesi_forecast as H  # noqa: E402
+from . import forecast as H  # noqa: E402
 
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5, "axes.spines.top": False,
                      "axes.spines.right": False, "savefig.dpi": 220, "axes.titlesize": 9,
@@ -433,9 +433,3 @@ def make_all(out="results_sim", fig_dir=None):
             fh.write(f"\\expandafter\\def\\csname R@{k}\\endcsname{{{v}}}\n")
     return R
 
-
-if __name__ == "__main__":
-    import sys
-    R = make_all(*(sys.argv[1:] or ["results_sim"]))
-    for k, v in R.items():
-        print(k, v)

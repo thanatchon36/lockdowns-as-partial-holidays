@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
-"""Build paper/arxiv/main.pdf: tables, paired tests, theory checks, macros, pdflatex.
-Run from the repository root with PYTHONPATH=src (the Makefile does this)."""
+"""Build the paper: paper/template.tex -> paper/paper.tex -> paper/paper.pdf.
+
+Fills the tables (%%TAB_*%%) and in-text numbers (<<key>>) from results/, adds the paired tests and theory
+checks, then compiles with tectonic (pdflatex when tectonic is missing). `build_thai` compiles the Thai
+draft paper/thai/paper_th.tex with tectonic (xelatex as fallback). Run from the repository root
+(`make paper`, `make thai`). Importing this module reads results/."""
 import os
 import pickle
 import re
+import shutil
 import subprocess
 
 import numpy as np
 import pandas as pd
 from scipy import stats
 
-import hesi_forecast as H
-import hesi_report as HR
+from . import forecast as H
+from . import report as HR
 
-RES, OUT = "results", "paper/arxiv"
+RES, OUT = "results", "paper"
 met = pd.read_csv(f"{RES}/metrics.csv")
 bet = pd.read_csv(f"{RES}/betas.csv")
 lam = pd.read_csv(f"{RES}/lamhat.csv")
@@ -257,13 +262,35 @@ def theory_numbers():
     return lamstar
 
 
-def build():
+def _compile(tex: str, cwd: str, latex: str) -> int:
+    """tectonic if installed (reruns itself until references settle), else `latex` three times."""
+    if shutil.which("tectonic"):
+        cmd, runs = ["tectonic", "-X", "compile", "--keep-logs", tex], 1
+    elif shutil.which(latex):
+        cmd, runs = [latex, "-interaction=nonstopmode", "-halt-on-error", tex], 3
+    else:
+        raise RuntimeError(f"neither tectonic nor {latex} found; install one of them to build {tex}")
+    for _ in range(runs):
+        r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+    print(f"{cmd[0]} {tex}: rc {r.returncode}")
+    log = os.path.join(cwd, tex.replace(".tex", ".log"))
+    if os.path.exists(log):
+        for line in open(log, encoding="utf-8", errors="ignore").read().splitlines():
+            if line.startswith("!") or "undefined" in line.lower() or "Overfull \\hbox" in line:
+                print("  ", line[:160])
+    if r.returncode:
+        print(r.stdout[-3000:], r.stderr[-3000:])
+    return r.returncode
+
+
+def render() -> str:
+    """paper/template.tex with every table and number filled in -> paper/paper.tex."""
     lamstar = theory_numbers()
     _paired = table_paired()
     tabs = {"TAB_E1": table_e1("mape"), "TAB_E1MASE": table_e1("mase"), "TAB_E2": table_e2(),
             "TAB_E0": table_e0(), "TAB_LAMHAT": table_lamhat(lamstar), "TAB_BETA": table_beta(),
             "TAB_ROBUST": table_robust(), "TAB_PAIRED": _paired}
-    tpl = open(f"{OUT}/main_template.tex", encoding="utf-8").read()
+    tpl = open(f"{OUT}/template.tex", encoding="utf-8").read()
     tpl = tpl.replace(r"statsmodels 0.15.0 \citep{box2015time}", r"statsmodels 0.15.0 \citep{seabold2010statsmodels}")
     tpl = tpl.replace(r"\bibitem[Silvestrini and Veredas(2008)]",
                       r"\bibitem[Seabold and Perktold(2010)]{seabold2010statsmodels} Seabold, S., \& Perktold, J. (2010). "
@@ -274,18 +301,17 @@ def build():
     missing = sorted(set(k for k in re.findall(r"<<([^<>]+)>>", tpl) if k not in R))
     assert not missing, missing
     tpl = re.sub(r"<<([^<>]+)>>", lambda m: R[m.group(1)], tpl)
-    open(f"{OUT}/main.tex", "w", encoding="utf-8").write(tpl)
-    for _ in range(3):
-        r = subprocess.run(["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "main.tex"], cwd=OUT,
-                           capture_output=True, text=True)
-    log = open(f"{OUT}/main.log", encoding="utf-8", errors="ignore").read()
-    print("pdflatex rc", r.returncode)
-    for line in log.splitlines():
-        if line.startswith("!") or "undefined" in line.lower() or "Overfull \\hbox" in line:
-            print("  ", line[:160])
+    open(f"{OUT}/paper.tex", "w", encoding="utf-8").write(tpl)
+    return f"{OUT}/paper.tex"
 
 
-if __name__ == "__main__":
-    build()
+def build() -> int:
+    render()
+    rc = _compile("paper.tex", OUT, "pdflatex")
     print({k: R[k] for k in ("lamstar.cal", "ac.closed", "ac.deltasd", "xraw.sd", "xres.sd", "xres.days",
                              "xdres.sd", "r1.mult", "bM.closed", "bPM.closed")})
+    return rc
+
+
+def build_thai() -> int:
+    return _compile("paper_th.tex", f"{OUT}/thai", "xelatex")

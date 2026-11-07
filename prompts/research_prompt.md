@@ -1,7 +1,7 @@
 # RESEARCH PROMPT — “ล็อกดาวน์ = วันหยุดบางส่วน” (Holiday‑Equivalent Stoppage, HES)
 ## พยากรณ์มูลค่าการส่งออกรายเดือนของไทยผ่านช่วงช็อกโควิด‑19 ด้วย Prophet โดยถ่ายโอนผลการหยุดงานจากสงกรานต์และตรุษจีน
 
-> **วิธีใช้:** คัดลอกทั้งไฟล์ไปวางใน AI agent ที่รันโค้ดได้ (เช่น Claude Code) แนบไฟล์ `hesi_forecast.py` และไฟล์ข้อมูลส่งออกรายเดือน (CSV: `month,value`) แล้วสั่งให้เริ่มที่ Phase 0
+> **วิธีใช้:** คัดลอกทั้งไฟล์ไปวางใน AI agent ที่รันโค้ดได้ (เช่น Claude Code) แนบไฟล์ `src/hesi/forecast.py` และไฟล์ข้อมูลส่งออกรายเดือน (CSV: `month,value`) แล้วสั่งให้เริ่มที่ Phase 0
 > **สัดส่วนงาน:** Academic 45% : Code 55% (รายละเอียดในหัวข้อ 3)
 
 ---
@@ -163,7 +163,7 @@ log y_d = g(t) + s_year(t) + s_week(t) + β_D x^D_d + β_P x^P_d + ε_d
 
 ## 9) Simulation study (validation ก่อนใช้ข้อมูลจริง)
 
-- รัน `python hesi_forecast.py simulate --reps 30` (DGP รายวันที่รู้ค่าจริง ใช้ปฏิทินและตัวขับเคลื่อนโควิดจริง)
+- รัน `hesi simulate --reps 30` (DGP รายวันที่รู้ค่าจริง ใช้ปฏิทินและตัวขับเคลื่อนโควิดจริง)
 - **S1 ideal:** κ = 1 (mobility = การหยุดผลิตจริง)
 - **S2 realistic:** κ = 0.5 + demand shock ปี 2020 และ rebound ปี 2021
 - ตรวจสามเรื่อง: (1) วิธีการ recover β ได้ (2) จุดต่ำสุดของ λ‑sweep อยู่ที่ κ (3) daily ดีกว่า monthly และ tree ล้มเหลวตามทฤษฎี

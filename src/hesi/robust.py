@@ -7,17 +7,16 @@ R1  Heterogeneous holidays: festival days (Songkran, New Year) have a larger eff
     (separate festival indicator + shared ordinary-holiday regressor carrying the dose).
 R2  Real-time HESI: trailing (one-sided) 7-day smoothing instead of the centred window.
 
-Usage: python robust_en.py SEED0 NREPS OUTDIR
+Usage: hesi robust --seed0 0 --reps 30 --out results
 """
 import os
-import sys
 import time
 
 import holidays
 import numpy as np
 import pandas as pd
 
-import hesi_forecast as H
+from . import forecast as H
 
 BETA_F, BETA_O = float(np.log(0.35)), float(np.log(0.55))
 FEST_KEYS = ("Songkran", "New Year")
@@ -123,6 +122,3 @@ def main(seed0, reps, out):
             pd.DataFrame(rec).to_csv(fn, mode="a", header=not os.path.exists(fn), index=False)
         print(f"seed {seed} done, {time.time() - t0:.0f}s", flush=True)
 
-
-if __name__ == "__main__":
-    main(int(sys.argv[1]), int(sys.argv[2]), sys.argv[3])

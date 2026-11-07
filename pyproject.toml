@@ -1,0 +1,36 @@
+[project]
+name = "lockdowns-as-partial-holidays"
+version = "1.0.0"
+description = "Holiday-Equivalent Stoppage (HES): transfer work-stoppage elasticities from recurring holidays to forecast Thailand's monthly exports through COVID-19"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Thanatchon Chongmankhong" }]
+# Exact pins on the modelling libraries keep the published results reproducible.
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=3.0",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "prophet==1.5.0",
+    "lightgbm==4.7.0",
+    "statsmodels==0.15.0",
+    "holidays==0.108",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+hesi = "hesi.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hesi"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

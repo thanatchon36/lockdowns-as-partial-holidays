@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-hesi_forecast.py — Holiday-Equivalent Stoppage (HES) forecasting toolkit
-=======================================================================
+hesi.forecast — Holiday-Equivalent Stoppage (HES) forecasting toolkit
+=====================================================================
 Research code for the paper
   "Lockdowns as Partial Holidays: Transferring Work-Stoppage Effects Learned from
    Songkran and Chinese New Year to Forecast Thailand's Monthly Exports through COVID-19"
@@ -22,18 +22,18 @@ period only needs a dose (HESI), not new parameters.
 
 Commands
 --------
-  python src/hesi_forecast.py simulate --reps 30 --out results   # Monte-Carlo study
-  python src/hesi_forecast.py figures  --out results             # figures + LaTeX tables
-  python src/hesi_forecast.py real --exports th_exports.csv --out results_real
+  hesi simulate --reps 30 --out results                  # Monte-Carlo study
+  hesi figures                                          # publication figures -> paper/figures/
+  hesi real --exports th_exports.csv --out results_real  # official export data
+(`hesi` is installed by `make setup`; `python -m hesi.cli` is equivalent.)
 
 Real-data CSV: first column = month (YYYY-MM), second column = value (e.g. USD million).
-External drivers are downloaded automatically (OxCGRT, Google Mobility mirror) into ./data.
+External drivers are downloaded automatically (OxCGRT, Google Mobility mirror) into data/raw/.
 
 Requires: numpy pandas prophet lightgbm statsmodels holidays matplotlib
 """
 from __future__ import annotations
 
-import argparse
 import logging
 import os
 import pickle
@@ -48,7 +48,7 @@ for _name in ("cmdstanpy", "prophet", "prophet.plot"):
     logging.getLogger(_name).disabled = True
 
 START, END = pd.Timestamp("2010-01-01"), pd.Timestamp("2024-12-31")
-DATA_DIR = os.environ.get("HESI_DATA", "data")
+DATA_DIR = os.environ.get("HESI_DATA", os.path.join("data", "raw"))
 OXCGRT_URL = ("https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/"
               "data/timeseries_indices/OxCGRT_timeseries_StringencyIndex_v1.csv")
 GMOB_URL = ("https://raw.githubusercontent.com/ActiveConclusion/COVID19_mobility/master/"
@@ -693,35 +693,3 @@ def cmd_real(args):
     pd.DataFrame(fc_rows).to_csv(os.path.join(args.out, "real_forecasts.csv"), index=False)
     pd.DataFrame(coef_rows).to_csv(os.path.join(args.out, "real_coefficients.csv"), index=False)
     print(pd.DataFrame(rows).pivot_table(index=["model", "variant"], columns="origin", values="mape").round(2))
-
-
-# =============================================================================
-# 7. CLI
-# =============================================================================
-def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    sub = ap.add_subparsers(dest="cmd", required=True)
-    s = sub.add_parser("simulate")
-    s.add_argument("--reps", type=int, default=30)
-    s.add_argument("--seed0", type=int, default=0)
-    s.add_argument("--out", default="results")
-    r = sub.add_parser("real")
-    r.add_argument("--exports", required=True)
-    r.add_argument("--out", default="results_real")
-    r.add_argument("--origins", nargs="*", default=["2019-12-31", "2020-12-31", "2022-12-31", "2023-12-31"])
-    r.add_argument("--horizon", type=int, default=12)
-    r.add_argument("--lam", type=float, default=1.0, help="dose multiplier on mobility-HESI")
-    f = sub.add_parser("figures")
-    f.add_argument("--out", default="results")
-    args = ap.parse_args()
-    if args.cmd == "simulate":
-        cmd_simulate(args)
-    elif args.cmd == "real":
-        cmd_real(args)
-    else:
-        import figs_en  # publication figures with automated overlap check
-        figs_en.make_all(res=args.out, out="figures")
-
-
-if __name__ == "__main__":
-    main()

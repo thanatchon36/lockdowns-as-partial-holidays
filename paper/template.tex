@@ -3,13 +3,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
-\input{glyphtounicode}
-\pdfgentounicode=1
-\pdfinterwordspaceon
+\ifdefined\pdfgentounicode % pdfLaTeX (arXiv); tectonic/XeTeX skips this
+  \input{glyphtounicode}\pdfgentounicode=1\pdfinterwordspaceon
+\fi
 \usepackage{microtype}
 \emergencystretch=3em
 \usepackage{amsmath, amssymb, amsthm, mathtools, bm}
 \usepackage{graphicx, booktabs, array, float, placeins}
+\graphicspath{{figures/}}
 \usepackage{xcolor}
 \usepackage[font=small, labelfont=bf, labelsep=period]{caption}
 \usepackage{enumitem}

@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
 from matplotlib.patches import Patch  # noqa: E402
 
-import hesi_forecast as H  # noqa: E402
+from . import forecast as H  # noqa: E402
 
 W = 6.3  # inches = LaTeX text width (A4, 2.5 cm margins) -> figures are never rescaled
 OI = dict(black="#000000", orange="#E69F00", sky="#56B4E9", green="#009E73", yellow="#F0E442",
@@ -461,7 +461,7 @@ def fig_e2(out, met):
     return _save(fig, out, "fig_e2.png")
 
 
-def make_all(res="results", out="figures"):
+def make_all(res="results", out="paper/figures"):
     os.makedirs(out, exist_ok=True)
     met = pd.read_csv(os.path.join(res, "metrics.csv"))
     bet = pd.read_csv(os.path.join(res, "betas.csv"))
@@ -478,7 +478,3 @@ def make_all(res="results", out="figures"):
     probs["e2"] = fig_e2(out, met)
     return probs
 
-
-if __name__ == "__main__":
-    p = make_all()
-    print("TOTAL problems:", sum(len(v) for v in p.values()))

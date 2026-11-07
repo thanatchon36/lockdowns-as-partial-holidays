@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-import hesi_forecast as H
+from hesi import forecast as H
 
 
 def test_songkran_2020_postponed_to_substitute_days():

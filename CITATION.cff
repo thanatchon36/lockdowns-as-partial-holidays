@@ -1,16 +1,31 @@
 cff-version: 1.2.0
-message: "If you use this code or the accompanying paper, please cite it as below."
-title: "Lockdowns as Partial Holidays: Identifying Work-Stoppage Elasticities from Recurring Holidays and Transferring Them to Forecast Thailand's Monthly Exports through the COVID-19 Shock"
+message: "Please cite the paper (preferred-citation); if you use the hesi code, also cite the software."
+title: "lockdowns-as-partial-holidays: Holiday-Equivalent Stoppage (HES) forecasting of Thailand's monthly exports through COVID-19"
+abstract: >-
+  Research code for the Holiday-Equivalent Stoppage (HES) framework, which
+  treats a lockdown as a partial holiday: a work-stoppage elasticity
+  identified from recurring holidays (Thai public holidays including
+  Songkran, and the Chinese New Year window) through one shared Prophet
+  regressor per channel is transferred to the pandemic with a dose, the
+  Holiday-Equivalent Stoppage Index computed from Google Community Mobility.
+  Includes the Monte Carlo study, robustness experiments, theory checks,
+  the paper build and a runner for official export data.
+type: software
 authors:
-  - family-names: "Chongmankhong"
-    given-names: "Thanatchon"
-version: "1.0.0"
-date-released: "2026-11-07"
+  - family-names: Chongmankhong
+    given-names: Thanatchon
+version: 1.0.0
+date-released: 2026-11-07
 license: MIT
-keywords:
-  - forecasting
-  - calendar effects
-  - Prophet
-  - COVID-19
-  - temporal aggregation
-  - Thailand
+repository-code: "https://github.com/thanatchon36/lockdowns-as-partial-holidays"
+url: "https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/"
+keywords: [forecasting, calendar-effects, prophet, covid-19, temporal-aggregation, thailand, exports]
+preferred-citation:
+  type: generic
+  title: "Lockdowns as Partial Holidays: Identifying Work-Stoppage Elasticities from Recurring Holidays and Transferring Them to Forecast Thailand's Monthly Exports through the COVID-19 Shock"
+  authors:
+    - family-names: Chongmankhong
+      given-names: Thanatchon
+  year: 2026
+  url: "https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/"
+  notes: "Preprint; results are from a Monte Carlo study with simulated export values."

@@ -1,0 +1,28 @@
+{
+  "title": "lockdowns-as-partial-holidays",
+  "upload_type": "software",
+  "description": "Research code for the Holiday-Equivalent Stoppage (HES) framework, which treats a lockdown as a partial holiday. A work-stoppage elasticity identified from recurring holidays (Thai public holidays including Songkran, and the Chinese New Year window) through one shared Prophet regressor per channel is transferred to the pandemic with a dose, the Holiday-Equivalent Stoppage Index computed from Google Community Mobility. Includes the Monte Carlo study, robustness experiments, theory checks, the paper build and a runner for official export data. Companion software to the preprint \"Lockdowns as Partial Holidays: Identifying Work-Stoppage Elasticities from Recurring Holidays and Transferring Them to Forecast Thailand's Monthly Exports through the COVID-19 Shock\".",
+  "creators": [
+    {
+      "name": "Chongmankhong, Thanatchon"
+    }
+  ],
+  "license": "mit",
+  "keywords": [
+    "forecasting",
+    "calendar effects",
+    "Prophet",
+    "COVID-19",
+    "temporal aggregation",
+    "Thailand",
+    "exports"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-preprint",
+      "scheme": "url"
+    }
+  ]
+}
