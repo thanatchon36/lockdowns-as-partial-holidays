@@ -17,6 +17,7 @@ from . import paper_build as PB
 
 REPO_URL = "https://github.com/thanatchon36/lockdowns-as-partial-holidays"
 PAPER_URL = "https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/"
+CONCEPT_DOI = "10.5281/zenodo.24036954"
 DATA_URL = "https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays"
 TITLE = "Lockdowns as Partial Holidays"
 SUBTITLE = ("Identifying Work-Stoppage Elasticities from Recurring Holidays and Transferring Them to Forecast "
@@ -199,12 +200,14 @@ def build_web(paper_dir: Path = Path("paper"), out_dir: Path = Path("docs/paper"
     actions = ('<li><a href="paper.pdf">Download PDF</a></li>'
                f'<li><a href="{REPO_URL}">Code and replication</a></li>'
                f'<li><a href="{DATA_URL}">Data (Hugging Face)</a></li>'
+               f'<li><a href="https://doi.org/{CONCEPT_DOI}">Zenodo archive</a></li>'
                f'<li><a href="{REPO_URL}/blob/main/paper/thai/paper_th.pdf">ฉบับภาษาไทย (PDF)</a></li>')
     bib = ("@misc{chongmankhong2026lockdowns,\n"
            "  author = {Chongmankhong, Thanatchon},\n"
            f"  title  = {{{TITLE}: {SUBTITLE}}},\n"
            "  year   = {2026},\n"
            "  note   = {Preprint},\n"
+           f"  doi    = {{{CONCEPT_DOI}}},\n"
            f"  url    = {{{PAPER_URL}}}\n"
            "}")
     cite = f"<h2>How to cite</h2><pre><code>{html.escape(bib)}</code></pre>"

@@ -16,6 +16,7 @@ authors:
     given-names: Thanatchon
 version: 1.0.0
 date-released: 2026-11-07
+doi: 10.5281/zenodo.24036954
 license: MIT
 repository-code: "https://github.com/thanatchon36/lockdowns-as-partial-holidays"
 url: "https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/"

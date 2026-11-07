@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- Zenodo archive of every release; concept DOI [10.5281/zenodo.24036954](https://doi.org/10.5281/zenodo.24036954), DOI badge in the README and
+  `doi` in `CITATION.cff`, the web reader and the dataset card.
+
 ## [1.0.0] - 2026-11-07
 
 ### Added

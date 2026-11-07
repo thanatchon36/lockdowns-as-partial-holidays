@@ -8,6 +8,7 @@
 <a href="paper/thai/paper_th.pdf"><img src="https://img.shields.io/badge/%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A-%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2-f5a623?style=flat-square&labelColor=0b1020" alt="Thai version"></a>
 <a href="docs/data_sources.md"><img src="https://img.shields.io/badge/exports-simulated-b0560f?style=flat-square&labelColor=0b1020" alt="Exports: simulated"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffe8a3?style=flat-square&labelColor=0b1020" alt="License MIT"></a>
+<a href="https://zenodo.org/badge/latestdoi/1449353707"><img src="https://zenodo.org/badge/1449353707.svg" alt="DOI"></a>
 <a href="https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-lockdowns--as--partial--holidays-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face dataset"></a>
 </p>
 
@@ -179,7 +180,8 @@ the paper's discussion of threats to validity.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff), or:
+See [`CITATION.cff`](CITATION.cff); each release is archived on Zenodo, concept DOI
+[10.5281/zenodo.24036954](https://doi.org/10.5281/zenodo.24036954) (DOI badge above). Or:
 
 ```bibtex
 @misc{chongmankhong2026lockdowns,
@@ -188,6 +190,7 @@ See [`CITATION.cff`](CITATION.cff), or:
             and Transferring Them to Forecast {Thailand}'s Monthly Exports through the {COVID-19} Shock},
   year   = {2026},
   note   = {Preprint},
+  doi    = {10.5281/zenodo.24036954},
   url    = {https://thanatchon36.github.io/lockdowns-as-partial-holidays/paper/}
 }
 ```
