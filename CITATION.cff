@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code or the accompanying paper, please cite it as below."
+title: "Lockdowns as Partial Holidays: Identifying Work-Stoppage Elasticities from Recurring Holidays and Transferring Them to Forecast Thailand's Monthly Exports through the COVID-19 Shock"
+authors:
+  - family-names: "Chongmankhong"
+    given-names: "Thanatchon"
+version: "1.0.0"
+date-released: "2026-11-07"
+license: MIT
+keywords:
+  - forecasting
+  - calendar effects
+  - Prophet
+  - COVID-19
+  - temporal aggregation
+  - Thailand

@@ -1,0 +1,601 @@
+seed,exp,scen,model,variant,mape
+0,R1,S1,one-tier,off,22.778947208379883
+0,R1,S1,two-tier,off,22.593908520884817
+0,R1,S1,one-tier,hesi,6.829742381599098
+0,R1,S1,two-tier,hesi,8.368871838769985
+0,R1,S1,one-tier,oracle,6.829742381599098
+0,R1,S1,two-tier,oracle,8.368871838769985
+0,R1,S2,one-tier,off,13.26015027340306
+0,R1,S2,two-tier,off,13.08087234299213
+0,R1,S2,one-tier,hesi,8.64127737280956
+0,R1,S2,two-tier,hesi,6.9665479277405336
+0,R1,S2,one-tier,oracle,4.970560061752194
+0,R1,S2,two-tier,oracle,5.8763373502941665
+0,R2,S1,Prophet-D HE,hesi-centred,8.516375952176054
+0,R2,S1,Prophet-D HE,hesi-trailing,8.793014496398525
+0,R2,S1,Prophet-D HE,oracle-centred,8.516375952176054
+0,R2,S1,Prophet-D HE,oracle-trailing,8.793014496398525
+0,R2,S2,Prophet-D HE,hesi-centred,8.48868971588662
+0,R2,S2,Prophet-D HE,hesi-trailing,8.848960416351394
+0,R2,S2,Prophet-D HE,oracle-centred,5.949204765642356
+0,R2,S2,Prophet-D HE,oracle-trailing,5.99813616522229
+1,R1,S1,one-tier,off,10.72295660426127
+1,R1,S1,two-tier,off,10.190918537235477
+1,R1,S1,one-tier,hesi,9.63368668580416
+1,R1,S1,two-tier,hesi,8.321572219195252
+1,R1,S1,one-tier,oracle,9.63368668580416
+1,R1,S1,two-tier,oracle,8.321572219195252
+1,R1,S2,one-tier,off,10.619379243333913
+1,R1,S2,two-tier,off,10.811679461448028
+1,R1,S2,one-tier,hesi,16.061975564277724
+1,R1,S2,two-tier,hesi,14.785547232434604
+1,R1,S2,one-tier,oracle,11.444953306019432
+1,R1,S2,two-tier,oracle,11.457271884968119
+1,R2,S1,Prophet-D HE,hesi-centred,8.43247170305682
+1,R2,S1,Prophet-D HE,hesi-trailing,8.35429996535121
+1,R2,S1,Prophet-D HE,oracle-centred,8.43247170305682
+1,R2,S1,Prophet-D HE,oracle-trailing,8.35429996535121
+1,R2,S2,Prophet-D HE,hesi-centred,16.33512263388274
+1,R2,S2,Prophet-D HE,hesi-trailing,16.33451214610149
+1,R2,S2,Prophet-D HE,oracle-centred,11.455227518413556
+1,R2,S2,Prophet-D HE,oracle-trailing,11.534919091090401
+2,R1,S1,one-tier,off,16.409644245955697
+2,R1,S1,two-tier,off,16.51759477126015
+2,R1,S1,one-tier,hesi,4.589482984573426
+2,R1,S1,two-tier,hesi,3.5058353479675737
+2,R1,S1,one-tier,oracle,4.589482984573426
+2,R1,S1,two-tier,oracle,3.5058353479675737
+2,R1,S2,one-tier,off,8.633881955690086
+2,R1,S2,two-tier,off,8.578374334622445
+2,R1,S2,one-tier,hesi,10.383932874675308
+2,R1,S2,two-tier,hesi,8.183701445162752
+2,R1,S2,one-tier,oracle,6.8934976776263435
+2,R1,S2,two-tier,oracle,6.817267477119358
+2,R2,S1,Prophet-D HE,hesi-centred,3.8554277147829006
+2,R2,S1,Prophet-D HE,hesi-trailing,4.25070268366334
+2,R2,S1,Prophet-D HE,oracle-centred,3.8554277147829006
+2,R2,S1,Prophet-D HE,oracle-trailing,4.25070268366334
+2,R2,S2,Prophet-D HE,hesi-centred,10.0606946178203
+2,R2,S2,Prophet-D HE,hesi-trailing,10.202109070565909
+2,R2,S2,Prophet-D HE,oracle-centred,6.98164546929153
+2,R2,S2,Prophet-D HE,oracle-trailing,7.11203770127085
+3,R1,S1,one-tier,off,16.66879475657944
+3,R1,S1,two-tier,off,16.22629591077686
+3,R1,S1,one-tier,hesi,4.622015284601521
+3,R1,S1,two-tier,hesi,3.9292882210605127
+3,R1,S1,one-tier,oracle,4.622015284601521
+3,R1,S1,two-tier,oracle,3.9292882210605127
+3,R1,S2,one-tier,off,8.256457217671107
+3,R1,S2,two-tier,off,7.922636166679056
+3,R1,S2,one-tier,hesi,10.901980092948897
+3,R1,S2,two-tier,hesi,8.784408967334596
+3,R1,S2,one-tier,oracle,5.9729729287355395
+3,R1,S2,two-tier,oracle,6.1736976800429755
+3,R2,S1,Prophet-D HE,hesi-centred,4.032198725414901
+3,R2,S1,Prophet-D HE,hesi-trailing,4.33255811182143
+3,R2,S1,Prophet-D HE,oracle-centred,4.032198725414901
+3,R2,S1,Prophet-D HE,oracle-trailing,4.33255811182143
+3,R2,S2,Prophet-D HE,hesi-centred,11.122335954794583
+3,R2,S2,Prophet-D HE,hesi-trailing,11.15495839970242
+3,R2,S2,Prophet-D HE,oracle-centred,6.085399568425701
+3,R2,S2,Prophet-D HE,oracle-trailing,6.061651503189068
+4,R1,S1,one-tier,off,17.38291388670664
+4,R1,S1,two-tier,off,17.261541633263167
+4,R1,S1,one-tier,hesi,6.836893882413237
+4,R1,S1,two-tier,hesi,6.257810813860422
+4,R1,S1,one-tier,oracle,6.836893882413237
+4,R1,S1,two-tier,oracle,6.257810813860422
+4,R1,S2,one-tier,off,10.899820018859172
+4,R1,S2,two-tier,off,10.651205429105365
+4,R1,S2,one-tier,hesi,12.84014622622209
+4,R1,S2,two-tier,hesi,11.315140120110446
+4,R1,S2,one-tier,oracle,9.520202981913066
+4,R1,S2,two-tier,oracle,9.26932365393119
+4,R2,S1,Prophet-D HE,hesi-centred,6.662219229388623
+4,R2,S1,Prophet-D HE,hesi-trailing,6.912133662702331
+4,R2,S1,Prophet-D HE,oracle-centred,6.662219229388623
+4,R2,S1,Prophet-D HE,oracle-trailing,6.912133662702331
+4,R2,S2,Prophet-D HE,hesi-centred,12.47361077945579
+4,R2,S2,Prophet-D HE,hesi-trailing,12.749330145355295
+4,R2,S2,Prophet-D HE,oracle-centred,9.110475868248159
+4,R2,S2,Prophet-D HE,oracle-trailing,9.180863132789668
+5,R1,S1,one-tier,off,20.39459141935865
+5,R1,S1,two-tier,off,20.064246705441878
+5,R1,S1,one-tier,hesi,5.342802882800802
+5,R1,S1,two-tier,hesi,6.073856251930787
+5,R1,S1,one-tier,oracle,5.342802882800802
+5,R1,S1,two-tier,oracle,6.073856251930787
+5,R1,S2,one-tier,off,11.394060795471484
+5,R1,S2,two-tier,off,11.07746161183975
+5,R1,S2,one-tier,hesi,8.576045836525726
+5,R1,S2,two-tier,hesi,6.487963552862729
+5,R1,S2,one-tier,oracle,4.510753990923014
+5,R1,S2,two-tier,oracle,4.961360153833675
+5,R2,S1,Prophet-D HE,hesi-centred,6.155229718751752
+5,R2,S1,Prophet-D HE,hesi-trailing,6.009088452184215
+5,R2,S1,Prophet-D HE,oracle-centred,6.155229718751752
+5,R2,S1,Prophet-D HE,oracle-trailing,6.009088452184215
+5,R2,S2,Prophet-D HE,hesi-centred,8.30063886203421
+5,R2,S2,Prophet-D HE,hesi-trailing,8.243787747388424
+5,R2,S2,Prophet-D HE,oracle-centred,4.94874986055
+5,R2,S2,Prophet-D HE,oracle-trailing,5.0430861612987865
+6,R1,S1,one-tier,off,17.689673252719874
+6,R1,S1,two-tier,off,17.42614222598747
+6,R1,S1,one-tier,hesi,5.24717845427362
+6,R1,S1,two-tier,hesi,4.6636588104272505
+6,R1,S1,one-tier,oracle,5.24717845427362
+6,R1,S1,two-tier,oracle,4.6636588104272505
+6,R1,S2,one-tier,off,7.906187038851802
+6,R1,S2,two-tier,off,7.660819981992733
+6,R1,S2,one-tier,hesi,10.096322816692942
+6,R1,S2,two-tier,hesi,8.132731705629322
+6,R1,S2,one-tier,oracle,4.770005813510122
+6,R1,S2,two-tier,oracle,4.187769566366218
+6,R2,S1,Prophet-D HE,hesi-centred,4.883590523909598
+6,R2,S1,Prophet-D HE,hesi-trailing,4.820470895428796
+6,R2,S1,Prophet-D HE,oracle-centred,4.883590523909598
+6,R2,S1,Prophet-D HE,oracle-trailing,4.820470895428796
+6,R2,S2,Prophet-D HE,hesi-centred,9.874150146427707
+6,R2,S2,Prophet-D HE,hesi-trailing,9.880178715840337
+6,R2,S2,Prophet-D HE,oracle-centred,4.214582032332712
+6,R2,S2,Prophet-D HE,oracle-trailing,4.0643401149540885
+7,R1,S1,one-tier,off,24.159697030474938
+7,R1,S1,two-tier,off,24.19230070562673
+7,R1,S1,one-tier,hesi,6.696640836604624
+7,R1,S1,two-tier,hesi,8.109619830242478
+7,R1,S1,one-tier,oracle,6.696640836604624
+7,R1,S1,two-tier,oracle,8.109619830242478
+7,R1,S2,one-tier,off,13.71633330676737
+7,R1,S2,two-tier,off,13.600997195337685
+7,R1,S2,one-tier,hesi,6.258543444844171
+7,R1,S2,two-tier,hesi,5.3777834012097685
+7,R1,S2,one-tier,oracle,6.704805663752557
+7,R1,S2,two-tier,oracle,7.6071374324268515
+7,R2,S1,Prophet-D HE,hesi-centred,8.54997301035753
+7,R2,S1,Prophet-D HE,hesi-trailing,8.348832001053157
+7,R2,S1,Prophet-D HE,oracle-centred,8.54997301035753
+7,R2,S1,Prophet-D HE,oracle-trailing,8.348832001053157
+7,R2,S2,Prophet-D HE,hesi-centred,5.940639304349457
+7,R2,S2,Prophet-D HE,hesi-trailing,5.716215962004423
+7,R2,S2,Prophet-D HE,oracle-centred,7.772903908264245
+7,R2,S2,Prophet-D HE,oracle-trailing,7.713013375535304
+8,R1,S1,one-tier,off,9.670120379320245
+8,R1,S1,two-tier,off,9.537935440850436
+8,R1,S1,one-tier,hesi,9.517957177956788
+8,R1,S1,two-tier,hesi,7.383138219552353
+8,R1,S1,one-tier,oracle,9.517957177956788
+8,R1,S1,two-tier,oracle,7.383138219552353
+8,R1,S2,one-tier,off,6.746446506942728
+8,R1,S2,two-tier,off,7.1809318859662605
+8,R1,S2,one-tier,hesi,16.342157509658602
+8,R1,S2,two-tier,hesi,14.234774317669338
+8,R1,S2,one-tier,oracle,9.587039380258807
+8,R1,S2,two-tier,oracle,8.965376605323703
+8,R2,S1,Prophet-D HE,hesi-centred,7.788790653412125
+8,R2,S1,Prophet-D HE,hesi-trailing,7.860416709190665
+8,R2,S1,Prophet-D HE,oracle-centred,7.788790653412125
+8,R2,S1,Prophet-D HE,oracle-trailing,7.860416709190665
+8,R2,S2,Prophet-D HE,hesi-centred,16.508724422539153
+8,R2,S2,Prophet-D HE,hesi-trailing,16.501602462040115
+8,R2,S2,Prophet-D HE,oracle-centred,9.079828959792625
+8,R2,S2,Prophet-D HE,oracle-trailing,9.153128100458103
+9,R1,S1,one-tier,off,11.703257348044446
+9,R1,S1,two-tier,off,11.600160530906162
+9,R1,S1,one-tier,hesi,6.906675639900019
+9,R1,S1,two-tier,hesi,5.022500149805371
+9,R1,S1,one-tier,oracle,6.906675639900019
+9,R1,S1,two-tier,oracle,5.022500149805371
+9,R1,S2,one-tier,off,5.9400524490686255
+9,R1,S2,two-tier,off,5.854782495350439
+9,R1,S2,one-tier,hesi,13.724486511443109
+9,R1,S2,two-tier,hesi,11.486210378614869
+9,R1,S2,one-tier,oracle,6.608578471542899
+9,R1,S2,two-tier,oracle,5.770206735890109
+9,R2,S1,Prophet-D HE,hesi-centred,5.408819876876078
+9,R2,S1,Prophet-D HE,hesi-trailing,5.3262251334920405
+9,R2,S1,Prophet-D HE,oracle-centred,5.408819876876078
+9,R2,S1,Prophet-D HE,oracle-trailing,5.3262251334920405
+9,R2,S2,Prophet-D HE,hesi-centred,13.72269727719624
+9,R2,S2,Prophet-D HE,hesi-trailing,13.72363035670849
+9,R2,S2,Prophet-D HE,oracle-centred,5.660590719939907
+9,R2,S2,Prophet-D HE,oracle-trailing,5.721371865436796
+10,R1,S1,one-tier,off,32.7484361952735
+10,R1,S1,two-tier,off,32.80876066947431
+10,R1,S1,one-tier,hesi,10.826876951110908
+10,R1,S1,two-tier,hesi,14.29393802145695
+10,R1,S1,one-tier,oracle,10.826876951110908
+10,R1,S1,two-tier,oracle,14.29393802145695
+10,R1,S2,one-tier,off,20.780002884497495
+10,R1,S2,two-tier,off,20.818976518315132
+10,R1,S2,one-tier,hesi,5.232891776250209
+10,R1,S2,two-tier,hesi,5.481655842652762
+10,R1,S2,one-tier,oracle,10.495762273873408
+10,R1,S2,two-tier,oracle,12.180117168961273
+10,R2,S1,Prophet-D HE,hesi-centred,14.84184141423364
+10,R2,S1,Prophet-D HE,hesi-trailing,14.817405452295763
+10,R2,S1,Prophet-D HE,oracle-centred,14.84184141423364
+10,R2,S1,Prophet-D HE,oracle-trailing,14.817405452295763
+10,R2,S2,Prophet-D HE,hesi-centred,4.849939021377658
+10,R2,S2,Prophet-D HE,hesi-trailing,5.185853018103483
+10,R2,S2,Prophet-D HE,oracle-centred,12.476992707062626
+10,R2,S2,Prophet-D HE,oracle-trailing,12.50648645311012
+11,R1,S1,one-tier,off,9.199401409444357
+11,R1,S1,two-tier,off,9.263971780573987
+11,R1,S1,one-tier,hesi,9.605691861175742
+11,R1,S1,two-tier,hesi,7.831868482458705
+11,R1,S1,one-tier,oracle,9.605691861175742
+11,R1,S1,two-tier,oracle,7.831868482458705
+11,R1,S2,one-tier,off,9.242751905735314
+11,R1,S2,two-tier,off,9.573461278976973
+11,R1,S2,one-tier,hesi,16.101815599644773
+11,R1,S2,two-tier,hesi,14.205344104914891
+11,R1,S2,one-tier,oracle,10.94842600909705
+11,R1,S2,two-tier,oracle,10.722962567565341
+11,R2,S1,Prophet-D HE,hesi-centred,7.820398826386652
+11,R2,S1,Prophet-D HE,hesi-trailing,7.996478309330284
+11,R2,S1,Prophet-D HE,oracle-centred,7.820398826386652
+11,R2,S1,Prophet-D HE,oracle-trailing,7.996478309330284
+11,R2,S2,Prophet-D HE,hesi-centred,15.877472572543397
+11,R2,S2,Prophet-D HE,hesi-trailing,15.84625190222703
+11,R2,S2,Prophet-D HE,oracle-centred,10.747315274454493
+11,R2,S2,Prophet-D HE,oracle-trailing,10.798814758945301
+12,R1,S1,one-tier,off,25.850677357242198
+12,R1,S1,two-tier,off,25.569205685530942
+12,R1,S1,one-tier,hesi,6.192190821214147
+12,R1,S1,two-tier,hesi,8.177540505122929
+12,R1,S1,one-tier,oracle,6.192190821214147
+12,R1,S1,two-tier,oracle,8.177540505122929
+12,R1,S2,one-tier,off,15.49002030100253
+12,R1,S2,two-tier,off,15.264939884907788
+12,R1,S2,one-tier,hesi,7.487528059855662
+12,R1,S2,two-tier,hesi,6.372274858118278
+12,R1,S2,one-tier,oracle,7.482252309658471
+12,R1,S2,two-tier,oracle,8.18477425071631
+12,R2,S1,Prophet-D HE,hesi-centred,8.526935737972385
+12,R2,S1,Prophet-D HE,hesi-trailing,8.662380575836163
+12,R2,S1,Prophet-D HE,oracle-centred,8.526935737972385
+12,R2,S1,Prophet-D HE,oracle-trailing,8.662380575836163
+12,R2,S2,Prophet-D HE,hesi-centred,7.034752133578132
+12,R2,S2,Prophet-D HE,hesi-trailing,7.376616371931299
+12,R2,S2,Prophet-D HE,oracle-centred,8.355126949004115
+12,R2,S2,Prophet-D HE,oracle-trailing,8.328017567022417
+13,R1,S1,one-tier,off,23.469203399618635
+13,R1,S1,two-tier,off,22.976528291841795
+13,R1,S1,one-tier,hesi,6.143234406503243
+13,R1,S1,two-tier,hesi,6.477363898133127
+13,R1,S1,one-tier,oracle,6.143234406503243
+13,R1,S1,two-tier,oracle,6.477363898133127
+13,R1,S2,one-tier,off,13.572698136072045
+13,R1,S2,two-tier,off,13.211467641601057
+13,R1,S2,one-tier,hesi,7.237921299407943
+13,R1,S2,two-tier,hesi,5.8317429438841994
+13,R1,S2,one-tier,oracle,5.115785451487758
+13,R1,S2,two-tier,oracle,5.77074887802269
+13,R2,S1,Prophet-D HE,hesi-centred,6.624876118137952
+13,R2,S1,Prophet-D HE,hesi-trailing,7.1557575868999965
+13,R2,S1,Prophet-D HE,oracle-centred,6.624876118137952
+13,R2,S1,Prophet-D HE,oracle-trailing,7.1557575868999965
+13,R2,S2,Prophet-D HE,hesi-centred,7.146197196680913
+13,R2,S2,Prophet-D HE,hesi-trailing,7.290419756771187
+13,R2,S2,Prophet-D HE,oracle-centred,5.759905520341667
+13,R2,S2,Prophet-D HE,oracle-trailing,6.010736255508855
+14,R1,S1,one-tier,off,20.995559582815623
+14,R1,S1,two-tier,off,21.02975988099908
+14,R1,S1,one-tier,hesi,6.687538331410871
+14,R1,S1,two-tier,hesi,7.549711848980182
+14,R1,S1,one-tier,oracle,6.687538331410871
+14,R1,S1,two-tier,oracle,7.549711848980182
+14,R1,S2,one-tier,off,11.41503323014816
+14,R1,S2,two-tier,off,11.436050132200934
+14,R1,S2,one-tier,hesi,8.605129689508486
+14,R1,S2,two-tier,hesi,6.33710512916133
+14,R1,S2,one-tier,oracle,5.178765650978165
+14,R1,S2,two-tier,oracle,5.287595959749565
+14,R2,S1,Prophet-D HE,hesi-centred,7.600927368749493
+14,R2,S1,Prophet-D HE,hesi-trailing,7.382293393349054
+14,R2,S1,Prophet-D HE,oracle-centred,7.600927368749493
+14,R2,S1,Prophet-D HE,oracle-trailing,7.382293393349054
+14,R2,S2,Prophet-D HE,hesi-centred,8.119774779998517
+14,R2,S2,Prophet-D HE,hesi-trailing,8.170610223994256
+14,R2,S2,Prophet-D HE,oracle-centred,5.311453738257321
+14,R2,S2,Prophet-D HE,oracle-trailing,5.0623530013551665
+15,R1,S1,one-tier,off,23.21732486338236
+15,R1,S1,two-tier,off,23.015621897197192
+15,R1,S1,one-tier,hesi,5.023439163561916
+15,R1,S1,two-tier,hesi,6.631994498592804
+15,R1,S1,one-tier,oracle,5.023439163561916
+15,R1,S1,two-tier,oracle,6.631994498592804
+15,R1,S2,one-tier,off,13.171724081622463
+15,R1,S2,two-tier,off,12.98391350898067
+15,R1,S2,one-tier,hesi,7.4144643612218
+15,R1,S2,two-tier,hesi,6.031511120140536
+15,R1,S2,one-tier,oracle,5.7944826939822915
+15,R1,S2,two-tier,oracle,6.543652841528176
+15,R2,S1,Prophet-D HE,hesi-centred,6.910865742462409
+15,R2,S1,Prophet-D HE,hesi-trailing,6.742477301346857
+15,R2,S1,Prophet-D HE,oracle-centred,6.910865742462409
+15,R2,S1,Prophet-D HE,oracle-trailing,6.742477301346857
+15,R2,S2,Prophet-D HE,hesi-centred,7.190697038694906
+15,R2,S2,Prophet-D HE,hesi-trailing,7.028495548107981
+15,R2,S2,Prophet-D HE,oracle-centred,6.5576501042627955
+15,R2,S2,Prophet-D HE,oracle-trailing,6.471913682171889
+16,R1,S1,one-tier,off,13.043047472558413
+16,R1,S1,two-tier,off,12.750074154018973
+16,R1,S1,one-tier,hesi,8.646372990919938
+16,R1,S1,two-tier,hesi,8.154537760911222
+16,R1,S1,one-tier,oracle,8.646372990919938
+16,R1,S1,two-tier,oracle,8.154537760911222
+16,R1,S2,one-tier,off,10.71734554457413
+16,R1,S2,two-tier,off,11.016002724637469
+16,R1,S2,one-tier,hesi,14.783022765276732
+16,R1,S2,two-tier,hesi,13.554883419754523
+16,R1,S2,one-tier,oracle,11.793883757581495
+16,R1,S2,two-tier,oracle,11.89868548176203
+16,R2,S1,Prophet-D HE,hesi-centred,8.223899100927156
+16,R2,S1,Prophet-D HE,hesi-trailing,8.382577038489368
+16,R2,S1,Prophet-D HE,oracle-centred,8.223899100927156
+16,R2,S1,Prophet-D HE,oracle-trailing,8.382577038489368
+16,R2,S2,Prophet-D HE,hesi-centred,14.803351548121082
+16,R2,S2,Prophet-D HE,hesi-trailing,15.091766770101845
+16,R2,S2,Prophet-D HE,oracle-centred,11.977931518631161
+16,R2,S2,Prophet-D HE,oracle-trailing,12.033268683274024
+17,R1,S1,one-tier,off,12.106706197115418
+17,R1,S1,two-tier,off,12.015873919105001
+17,R1,S1,one-tier,hesi,9.80402146072673
+17,R1,S1,two-tier,hesi,7.672805720565023
+17,R1,S1,one-tier,oracle,9.80402146072673
+17,R1,S1,two-tier,oracle,7.672805720565023
+17,R1,S2,one-tier,off,10.10659435838827
+17,R1,S2,two-tier,off,10.140997687669145
+17,R1,S2,one-tier,hesi,16.5176859822134
+17,R1,S2,two-tier,hesi,14.360041540631993
+17,R1,S2,one-tier,oracle,9.979726619502232
+17,R1,S2,two-tier,oracle,9.944387563969377
+17,R2,S1,Prophet-D HE,hesi-centred,7.644957530785286
+17,R2,S1,Prophet-D HE,hesi-trailing,7.647973517863553
+17,R2,S1,Prophet-D HE,oracle-centred,7.644957530785286
+17,R2,S1,Prophet-D HE,oracle-trailing,7.647973517863553
+17,R2,S2,Prophet-D HE,hesi-centred,16.312085396741857
+17,R2,S2,Prophet-D HE,hesi-trailing,16.386294948836742
+17,R2,S2,Prophet-D HE,oracle-centred,9.883695265525635
+17,R2,S2,Prophet-D HE,oracle-trailing,9.911750987828318
+18,R1,S1,one-tier,off,10.098234163318189
+18,R1,S1,two-tier,off,10.007835434697084
+18,R1,S1,one-tier,hesi,9.063336098533275
+18,R1,S1,two-tier,hesi,6.850145260118419
+18,R1,S1,one-tier,oracle,9.063336098533275
+18,R1,S1,two-tier,oracle,6.850145260118419
+18,R1,S2,one-tier,off,5.6787967554907
+18,R1,S2,two-tier,off,5.865088764499933
+18,R1,S2,one-tier,hesi,15.257679489946105
+18,R1,S2,two-tier,hesi,13.166821347435786
+18,R1,S2,one-tier,oracle,8.588035523208875
+18,R1,S2,two-tier,oracle,7.654374972303842
+18,R2,S1,Prophet-D HE,hesi-centred,7.216733138955357
+18,R2,S1,Prophet-D HE,hesi-trailing,7.466957911193302
+18,R2,S1,Prophet-D HE,oracle-centred,7.216733138955357
+18,R2,S1,Prophet-D HE,oracle-trailing,7.466957911193302
+18,R2,S2,Prophet-D HE,hesi-centred,15.25395377424568
+18,R2,S2,Prophet-D HE,hesi-trailing,15.55747310051378
+18,R2,S2,Prophet-D HE,oracle-centred,7.82514556272838
+18,R2,S2,Prophet-D HE,oracle-trailing,7.9531117615898275
+19,R1,S1,one-tier,off,27.21679632155328
+19,R1,S1,two-tier,off,27.02800542126753
+19,R1,S1,one-tier,hesi,8.186870675817683
+19,R1,S1,two-tier,hesi,9.599550734245506
+19,R1,S1,one-tier,oracle,8.186870675817683
+19,R1,S1,two-tier,oracle,9.599550734245506
+19,R1,S2,one-tier,off,16.53452343256367
+19,R1,S2,two-tier,off,16.40905914554005
+19,R1,S2,one-tier,hesi,7.351889382510228
+19,R1,S2,two-tier,hesi,6.14467556054888
+19,R1,S2,one-tier,oracle,7.816979197823591
+19,R1,S2,two-tier,oracle,8.85617441292716
+19,R2,S1,Prophet-D HE,hesi-centred,10.060217770689214
+19,R2,S1,Prophet-D HE,hesi-trailing,9.772679001028393
+19,R2,S1,Prophet-D HE,oracle-centred,10.060217770689214
+19,R2,S1,Prophet-D HE,oracle-trailing,9.772679001028393
+19,R2,S2,Prophet-D HE,hesi-centred,6.898598865504805
+19,R2,S2,Prophet-D HE,hesi-trailing,6.835934584686417
+19,R2,S2,Prophet-D HE,oracle-centred,9.116398358292415
+19,R2,S2,Prophet-D HE,oracle-trailing,9.004456002573457
+20,R1,S1,one-tier,off,20.188682857631942
+20,R1,S1,two-tier,off,19.68429843173497
+20,R1,S1,one-tier,hesi,6.968110420053055
+20,R1,S1,two-tier,hesi,6.639906920637601
+20,R1,S1,one-tier,oracle,6.968110420053055
+20,R1,S1,two-tier,oracle,6.639906920637601
+20,R1,S2,one-tier,off,11.047762484311075
+20,R1,S2,two-tier,off,10.58443163824052
+20,R1,S2,one-tier,hesi,9.3195630875107
+20,R1,S2,two-tier,hesi,7.597525278596179
+20,R1,S2,one-tier,oracle,5.561980378211919
+20,R1,S2,two-tier,oracle,5.396437535900692
+20,R2,S1,Prophet-D HE,hesi-centred,6.795345747185968
+20,R2,S1,Prophet-D HE,hesi-trailing,7.083403224043234
+20,R2,S1,Prophet-D HE,oracle-centred,6.795345747185968
+20,R2,S1,Prophet-D HE,oracle-trailing,7.083403224043234
+20,R2,S2,Prophet-D HE,hesi-centred,9.365891115421572
+20,R2,S2,Prophet-D HE,hesi-trailing,9.681063979606174
+20,R2,S2,Prophet-D HE,oracle-centred,5.406362635938753
+20,R2,S2,Prophet-D HE,oracle-trailing,5.418526351581207
+21,R1,S1,one-tier,off,15.23429498808616
+21,R1,S1,two-tier,off,15.162976881734444
+21,R1,S1,one-tier,hesi,6.176779059833257
+21,R1,S1,two-tier,hesi,5.754040314330822
+21,R1,S1,one-tier,oracle,6.176779059833257
+21,R1,S1,two-tier,oracle,5.754040314330822
+21,R1,S2,one-tier,off,9.35540505570596
+21,R1,S2,two-tier,off,9.441408822265112
+21,R1,S2,one-tier,hesi,12.063323932636749
+21,R1,S2,two-tier,hesi,10.430197964405226
+21,R1,S2,one-tier,oracle,8.44290695567856
+21,R1,S2,two-tier,oracle,8.584710566018037
+21,R2,S1,Prophet-D HE,hesi-centred,6.251871740198251
+21,R2,S1,Prophet-D HE,hesi-trailing,6.417063194467416
+21,R2,S1,Prophet-D HE,oracle-centred,6.251871740198251
+21,R2,S1,Prophet-D HE,oracle-trailing,6.417063194467416
+21,R2,S2,Prophet-D HE,hesi-centred,11.951812303032405
+21,R2,S2,Prophet-D HE,hesi-trailing,12.09635845539972
+21,R2,S2,Prophet-D HE,oracle-centred,8.700374888914569
+21,R2,S2,Prophet-D HE,oracle-trailing,8.751661918572278
+22,R1,S1,one-tier,off,7.308953908236994
+22,R1,S1,two-tier,off,7.0089913223895906
+22,R1,S1,one-tier,hesi,12.487441087216189
+22,R1,S1,two-tier,hesi,10.680030376875905
+22,R1,S1,one-tier,oracle,12.487441087216189
+22,R1,S1,two-tier,oracle,10.680030376875905
+22,R1,S2,one-tier,off,7.87219747653672
+22,R1,S2,two-tier,off,8.318747467285084
+22,R1,S2,one-tier,hesi,18.90767776701383
+22,R1,S2,two-tier,hesi,17.269859954553056
+22,R1,S2,one-tier,oracle,11.824830500533757
+22,R1,S2,two-tier,oracle,11.369407907324272
+22,R2,S1,Prophet-D HE,hesi-centred,10.593869314354786
+22,R2,S1,Prophet-D HE,hesi-trailing,10.727512276011923
+22,R2,S1,Prophet-D HE,oracle-centred,10.593869314354786
+22,R2,S1,Prophet-D HE,oracle-trailing,10.727512276011923
+22,R2,S2,Prophet-D HE,hesi-centred,19.077886260725275
+22,R2,S2,Prophet-D HE,hesi-trailing,19.089541489838073
+22,R2,S2,Prophet-D HE,oracle-centred,11.31316227914032
+22,R2,S2,Prophet-D HE,oracle-trailing,11.42969539093338
+23,R1,S1,one-tier,off,16.668314541200225
+23,R1,S1,two-tier,off,16.769799688793885
+23,R1,S1,one-tier,hesi,4.864705155838934
+23,R1,S1,two-tier,hesi,4.090731608933738
+23,R1,S1,one-tier,oracle,4.864705155838934
+23,R1,S1,two-tier,oracle,4.090731608933738
+23,R1,S2,one-tier,off,8.474461360661135
+23,R1,S2,two-tier,off,8.416432783928485
+23,R1,S2,one-tier,hesi,11.085402451347472
+23,R1,S2,two-tier,hesi,9.086104179888144
+23,R1,S2,one-tier,oracle,4.981974124629495
+23,R1,S2,two-tier,oracle,5.023430601779703
+23,R2,S1,Prophet-D HE,hesi-centred,4.564216523593418
+23,R2,S1,Prophet-D HE,hesi-trailing,4.857746981380423
+23,R2,S1,Prophet-D HE,oracle-centred,4.564216523593418
+23,R2,S1,Prophet-D HE,oracle-trailing,4.857746981380423
+23,R2,S2,Prophet-D HE,hesi-centred,10.864395610895324
+23,R2,S2,Prophet-D HE,hesi-trailing,11.200564548098152
+23,R2,S2,Prophet-D HE,oracle-centred,4.945181105397297
+23,R2,S2,Prophet-D HE,oracle-trailing,4.977461262665925
+24,R1,S1,one-tier,off,11.67476237347046
+24,R1,S1,two-tier,off,11.53291702175285
+24,R1,S1,one-tier,hesi,8.694208046399476
+24,R1,S1,two-tier,hesi,6.661856080846329
+24,R1,S1,one-tier,oracle,8.694208046399476
+24,R1,S1,two-tier,oracle,6.661856080846329
+24,R1,S2,one-tier,off,8.114962967059892
+24,R1,S2,two-tier,off,8.253643045939898
+24,R1,S2,one-tier,hesi,15.46171143373356
+24,R1,S2,two-tier,hesi,13.418596902836061
+24,R1,S2,one-tier,oracle,9.20790266565894
+24,R1,S2,two-tier,oracle,8.852323503915715
+24,R2,S1,Prophet-D HE,hesi-centred,6.9346937448880945
+24,R2,S1,Prophet-D HE,hesi-trailing,7.096259549960992
+24,R2,S1,Prophet-D HE,oracle-centred,6.9346937448880945
+24,R2,S1,Prophet-D HE,oracle-trailing,7.096259549960992
+24,R2,S2,Prophet-D HE,hesi-centred,15.259926962149642
+24,R2,S2,Prophet-D HE,hesi-trailing,15.59149157922571
+24,R2,S2,Prophet-D HE,oracle-centred,8.951071138996024
+24,R2,S2,Prophet-D HE,oracle-trailing,9.086441542283485
+25,R1,S1,one-tier,off,28.388404455802757
+25,R1,S1,two-tier,off,28.287593507693824
+25,R1,S1,one-tier,hesi,7.984397498164589
+25,R1,S1,two-tier,hesi,10.309772379469178
+25,R1,S1,one-tier,oracle,7.984397498164589
+25,R1,S1,two-tier,oracle,10.309772379469178
+25,R1,S2,one-tier,off,17.904524416512444
+25,R1,S2,two-tier,off,17.807871330607703
+25,R1,S2,one-tier,hesi,6.927066194430494
+25,R1,S2,two-tier,hesi,5.900342101094214
+25,R1,S2,one-tier,oracle,8.328303325165093
+25,R1,S2,two-tier,oracle,9.57131346226686
+25,R2,S1,Prophet-D HE,hesi-centred,10.214822921700144
+25,R2,S1,Prophet-D HE,hesi-trailing,10.322259608983583
+25,R2,S1,Prophet-D HE,oracle-centred,10.214822921700144
+25,R2,S1,Prophet-D HE,oracle-trailing,10.322259608983583
+25,R2,S2,Prophet-D HE,hesi-centred,6.721209610656091
+25,R2,S2,Prophet-D HE,hesi-trailing,7.224703796044955
+25,R2,S2,Prophet-D HE,oracle-centred,9.53351589969916
+25,R2,S2,Prophet-D HE,oracle-trailing,9.494770257064756
+26,R1,S1,one-tier,off,17.760609794813618
+26,R1,S1,two-tier,off,17.718529009566545
+26,R1,S1,one-tier,hesi,6.099194632000382
+26,R1,S1,two-tier,hesi,5.910167177480575
+26,R1,S1,one-tier,oracle,6.099194632000382
+26,R1,S1,two-tier,oracle,5.910167177480575
+26,R1,S2,one-tier,off,10.923775611140305
+26,R1,S2,two-tier,off,11.132472005712245
+26,R1,S2,one-tier,hesi,10.933710589360361
+26,R1,S2,two-tier,hesi,9.858388379201662
+26,R1,S2,one-tier,oracle,9.736132965017804
+26,R1,S2,two-tier,oracle,9.853533322173362
+26,R2,S1,Prophet-D HE,hesi-centred,6.289783753557019
+26,R2,S1,Prophet-D HE,hesi-trailing,6.6893401804168295
+26,R2,S1,Prophet-D HE,oracle-centred,6.289783753557019
+26,R2,S1,Prophet-D HE,oracle-trailing,6.6893401804168295
+26,R2,S2,Prophet-D HE,hesi-centred,10.766809924751223
+26,R2,S2,Prophet-D HE,hesi-trailing,11.161092246168474
+26,R2,S2,Prophet-D HE,oracle-centred,10.06742955002317
+26,R2,S2,Prophet-D HE,oracle-trailing,10.210285452115546
+27,R1,S1,one-tier,off,16.166068196886222
+27,R1,S1,two-tier,off,16.001437705651313
+27,R1,S1,one-tier,hesi,5.677541350739176
+27,R1,S1,two-tier,hesi,4.9313146049643795
+27,R1,S1,one-tier,oracle,5.677541350739176
+27,R1,S1,two-tier,oracle,4.9313146049643795
+27,R1,S2,one-tier,off,9.754165429102619
+27,R1,S2,two-tier,off,9.588730273171391
+27,R1,S2,one-tier,hesi,11.944664673141025
+27,R1,S2,two-tier,hesi,10.16609560775829
+27,R1,S2,one-tier,oracle,8.237110065264476
+27,R1,S2,two-tier,oracle,8.242678450566915
+27,R2,S1,Prophet-D HE,hesi-centred,5.023056447701141
+27,R2,S1,Prophet-D HE,hesi-trailing,5.27841238560039
+27,R2,S1,Prophet-D HE,oracle-centred,5.023056447701141
+27,R2,S1,Prophet-D HE,oracle-trailing,5.27841238560039
+27,R2,S2,Prophet-D HE,hesi-centred,11.538929819796262
+27,R2,S2,Prophet-D HE,hesi-trailing,11.827935177940462
+27,R2,S2,Prophet-D HE,oracle-centred,8.277083424152758
+27,R2,S2,Prophet-D HE,oracle-trailing,8.426247171448292
+28,R1,S1,one-tier,off,37.3526169069859
+28,R1,S1,two-tier,off,36.74410972917805
+28,R1,S1,one-tier,hesi,15.358412901041396
+28,R1,S1,two-tier,hesi,17.867596484182457
+28,R1,S1,one-tier,oracle,15.358412901041396
+28,R1,S1,two-tier,oracle,17.867596484182457
+28,R1,S2,one-tier,off,25.53981034979586
+28,R1,S2,two-tier,off,24.98984697692159
+28,R1,S2,one-tier,hesi,6.969151019427238
+28,R1,S2,two-tier,hesi,8.320552783949193
+28,R1,S2,one-tier,oracle,14.92947949923532
+28,R1,S2,two-tier,oracle,16.076203236719984
+28,R2,S1,Prophet-D HE,hesi-centred,18.434523309136466
+28,R2,S1,Prophet-D HE,hesi-trailing,18.380025526700976
+28,R2,S1,Prophet-D HE,oracle-centred,18.434523309136466
+28,R2,S1,Prophet-D HE,oracle-trailing,18.380025526700976
+28,R2,S2,Prophet-D HE,hesi-centred,6.90709323585546
+28,R2,S2,Prophet-D HE,hesi-trailing,7.003260414534738
+28,R2,S2,Prophet-D HE,oracle-centred,16.5005660755847
+28,R2,S2,Prophet-D HE,oracle-trailing,16.477170233532323
+29,R1,S1,one-tier,off,25.957976197396746
+29,R1,S1,two-tier,off,25.675716033254307
+29,R1,S1,one-tier,hesi,5.576901971619838
+29,R1,S1,two-tier,hesi,7.630023657145897
+29,R1,S1,one-tier,oracle,5.576901971619838
+29,R1,S1,two-tier,oracle,7.630023657145897
+29,R1,S2,one-tier,off,15.434514839055002
+29,R1,S2,two-tier,off,15.186743106270395
+29,R1,S2,one-tier,hesi,6.9879146513494765
+29,R1,S2,two-tier,hesi,5.4249592453672175
+29,R1,S2,one-tier,oracle,6.624589507951476
+29,R1,S2,two-tier,oracle,7.217856153141312
+29,R2,S1,Prophet-D HE,hesi-centred,7.9866670585491395
+29,R2,S1,Prophet-D HE,hesi-trailing,8.011550471412837
+29,R2,S1,Prophet-D HE,oracle-centred,7.9866670585491395
+29,R2,S1,Prophet-D HE,oracle-trailing,8.011550471412837
+29,R2,S2,Prophet-D HE,hesi-centred,6.826298790046309
+29,R2,S2,Prophet-D HE,hesi-trailing,7.088782345872385
+29,R2,S2,Prophet-D HE,oracle-centred,7.3345393428914845
+29,R2,S2,Prophet-D HE,oracle-trailing,7.328637613930665

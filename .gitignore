@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+results_real/
+data/gmob_countries.csv
+.DS_Store

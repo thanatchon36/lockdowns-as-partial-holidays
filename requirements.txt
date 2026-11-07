@@ -1,0 +1,10 @@
+# Tested with Python 3.12. Exact pins on the modelling libraries keep results reproducible.
+numpy>=2.0
+pandas>=3.0
+scipy>=1.11
+matplotlib>=3.8
+prophet==1.5.0
+lightgbm==4.7.0
+statsmodels==0.15.0
+holidays==0.108
+pytest>=8
