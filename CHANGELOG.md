@@ -7,6 +7,9 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- LinkedIn poster, `docs/assets/linkedin_poster.png` (`make poster`, 1440 x 1800, Fira Sans under the SIL OFL in
+  `docs/assets/fonts/`), with every number computed from the data and results, and a post draft in English
+  and Thai, `pitch/linkedin_post.md`.
 - Zenodo archive of every release; concept DOI [10.5281/zenodo.24036954](https://doi.org/10.5281/zenodo.24036954), DOI badge in the README and
   `doi` in `CITATION.cff`, the web reader and the dataset card.
 
