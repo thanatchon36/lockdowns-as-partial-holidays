@@ -1,0 +1,11 @@
+Lockdowns as Partial Holidays: model licence
+
+The fitted models, meta.json, forecast_check.csv and hes_forecast.py in this repository
+Copyright (c) 2026 Thanatchon Chongmankhong
+Licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0),
+https://creativecommons.org/licenses/by/4.0/
+
+The models were trained on simulated export values and the Thai and Chinese holiday calendars only (every
+pandemic dose is zero before 2020). The HESI dose used to forecast with them is published in the dataset
+thanatchon36/lockdowns-as-partial-holidays; it is derived from Google LLC "Google COVID-19 Community Mobility
+Reports" and remains under Google's terms of use.

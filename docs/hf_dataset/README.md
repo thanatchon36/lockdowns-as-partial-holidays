@@ -56,7 +56,8 @@ The paper treats a lockdown as a partial holiday. Recurring holidays (Thai publi
 the Chinese New Year window) identify a work-stoppage elasticity through one shared regressor per channel in
 Prophet. During the pandemic the same regressor carries a dose, the Holiday-Equivalent Stoppage Index (HESI): the
 drop in workplace mobility on a day divided by the median drop on a weekday public holiday. Code:
-<https://github.com/thanatchon36/lockdowns-as-partial-holidays>; archived on Zenodo:
+<https://github.com/thanatchon36/lockdowns-as-partial-holidays>; fitted models:
+[`thanatchon36/lockdowns-as-partial-holidays`](https://huggingface.co/thanatchon36/lockdowns-as-partial-holidays); archived on Zenodo:
 [10.5281/zenodo.24036954](https://doi.org/10.5281/zenodo.24036954).
 
 *Independent personal research. Does not represent the views of any employer or institution.*

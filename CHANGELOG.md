@@ -6,12 +6,19 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+- `scikit-learn` added to the dependencies: `lightgbm.LGBMRegressor` needs it, so `make simulate` failed in a
+  fresh install.
+
 ### Changed
 - Thai draft (`paper/thai/paper_th.pdf`) now uses the arXiv layout of the English paper (`paper/arxiv.sty`:
   title box, preprint header, abstract, keywords and JEL codes, lettered appendices); author ธนัชชนม์ จงมั่นคง;
   reproducibility notes point to the `hesi` package.
 
 ### Added
+- Models on Hugging Face, [`thanatchon36/lockdowns-as-partial-holidays`](https://huggingface.co/thanatchon36/lockdowns-as-partial-holidays): the six fitted HES models of the
+  shock experiment for replication 0 (Prophet as JSON, LightGBM as text, SARIMAX as parameters; no pickle), a
+  standalone loader `hes_forecast.py`, and a check of every forecast against the paper's run (`make model`).
 - LinkedIn poster, `docs/assets/linkedin_poster.png` (`make poster`, 1440 x 1800, Fira Sans under the SIL OFL in
   `docs/assets/fonts/`), with every number computed from the data and results, and a post draft in English
   and Thai, `pitch/linkedin_post.md`.

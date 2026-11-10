@@ -1,7 +1,7 @@
 PY ?= .venv/bin/python
 REPS ?= 30
 
-.PHONY: setup test simulate robust figures paper thai web arxiv banner poster dataset all clean
+.PHONY: setup test simulate robust figures paper thai web arxiv banner poster dataset model all clean
 
 setup:          ## create venv and install the package (needs uv)
 	uv venv .venv --python 3.12
@@ -42,6 +42,9 @@ poster:         ## LinkedIn poster -> docs/assets/linkedin_poster.png (1440 x 18
 
 dataset:        ## Hugging Face dataset -> dist/hf_dataset/ (upload: hf upload thanatchon36/lockdowns-as-partial-holidays dist/hf_dataset . --repo-type dataset)
 	$(PY) scripts/export_hf_dataset.py
+
+model:          ## Hugging Face model repo -> dist/hf_model/ (refit, save without pickle, reload and check; upload: hf upload thanatchon36/lockdowns-as-partial-holidays dist/hf_model . --repo-type model)
+	$(PY) scripts/export_hf_model.py
 
 all: simulate robust figures paper
 

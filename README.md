@@ -10,6 +10,7 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-ffe8a3?style=flat-square&labelColor=0b1020" alt="License MIT"></a>
 <a href="https://zenodo.org/badge/latestdoi/1449353707"><img src="https://zenodo.org/badge/1449353707.svg" alt="DOI"></a>
 <a href="https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20dataset-lockdowns--as--partial--holidays-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face dataset"></a>
+<a href="https://huggingface.co/thanatchon36/lockdowns-as-partial-holidays"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20model-lockdowns--as--partial--holidays-f5a623?style=flat-square&labelColor=0b1020" alt="Hugging Face model"></a>
 </p>
 
 <p align="center">
@@ -64,6 +65,7 @@ Full reproduction from scratch: `make all` (simulate + robust + figures + paper,
 | `arxiv` | arXiv source bundle → `paper/arxiv.tar.gz` (prints title, abstract and comments for the form) |
 | `banner` | README banner → `docs/assets/banner.png`, from the real Google Mobility data |
 | `dataset` | Hugging Face dataset → `dist/hf_dataset/` (CSV only, with card, licence and checksums) |
+| `model` | Hugging Face model repo → `dist/hf_model/`: refits the HES models of replication 0, saves them without pickle, reloads and checks them |
 
 Every target is a thin wrapper around the `hesi` command (`hesi --help`), installed by `make setup`.
 
@@ -127,6 +129,9 @@ sample, how sensitive the transfer is to the dose, what monthly data lose, and w
 - Dataset on Hugging Face: [`thanatchon36/lockdowns-as-partial-holidays`](https://huggingface.co/datasets/thanatchon36/lockdowns-as-partial-holidays), with the daily drivers
   and shared regressors, the real OxCGRT and Google Mobility extracts, the simulated exports and forecast
   paths of replication 0, and all Monte Carlo results as CSV (`make dataset` builds it)
+- Models on Hugging Face: [`thanatchon36/lockdowns-as-partial-holidays`](https://huggingface.co/thanatchon36/lockdowns-as-partial-holidays), the six fitted HES models
+  of the shock experiment (replication 0, trained on simulated exports) with a standalone loader, no pickle
+  (`make model` builds it)
 - Thai-language draft: [`paper/thai/paper_th.pdf`](paper/thai/paper_th.pdf) (source `paper/thai/paper_th.tex`,
   Sarabun font)
 - Research prompt for an AI agent to replicate the study with official data:
@@ -146,6 +151,7 @@ src/hesi/
 scripts/arxiv_bundle.py     arXiv source bundle
 scripts/make_banner.py      README banner
 scripts/export_hf_dataset.py  Hugging Face dataset; card and licence in docs/hf_dataset/
+scripts/export_hf_model.py    Hugging Face model repo; card, licence and loader in docs/hf_model/
 data/raw/                   OxCGRT (Thailand, China) and Google Mobility (Thailand) extracts
 docs/data_sources.md        files, provenance and terms of use
 docs/paper/                 web reader (GitHub Pages), built by `make web`
